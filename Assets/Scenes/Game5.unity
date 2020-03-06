@@ -4638,6 +4638,7 @@ GameObject:
   - component: {fileID: 1847161996}
   - component: {fileID: 1847161998}
   - component: {fileID: 1847161999}
+  - component: {fileID: 1847162000}
   m_Layer: 5
   m_Name: GameManager
   m_TagString: Untagged
@@ -4664,19 +4665,7 @@ MonoBehaviour:
   cuteThing: {fileID: 1008726348}
   gameManager: {fileID: 639279403}
   guildPanel: {fileID: 100173996}
-  question:
-  - question: 1+1 = ?
-    answer1: 1
-    answer2: 2
-    answer3: 3
-    answer4: 4
-    trueAnswer: 1
-  - question: 90 -22 = ??
-    answer1: 78
-    answer2: 88
-    answer3: 29
-    answer4: 246
-    trueAnswer: 0
+  questions: []
   ques: {fileID: 940337042}
   answer:
   - {fileID: 739127488}
@@ -4731,6 +4720,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67bca302447aeba43b994258b324e872, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1847162000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847161995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d94501a784f0804e80493b702e80585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1879812180

@@ -4,15 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 //Tinh toan lai cach tinh diem cong cho game Ok 
-public class GameManager : MonoBehaviour
+public class GameManager4 : MonoBehaviour
 {
-    public Questions[] questions;
+    [SerializeField] Question.QuesData[] questions ;
 
-    private static List<Questions> unansweredQuestions;
+    private static List<Question.QuesData> unansweredQuestions;
 
-    Questions curQuestion;
+    Question.QuesData curQuestion;
+
+    //Question.Questiondata 
 
     [SerializeField] float timeBetweenTransitions = 1f;
 
@@ -25,18 +28,71 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject Wall;
     [SerializeField] GameObject thirdStep;
 
+    Question.Questiondata initQuesData;
+
     private void Awake()
     {
         firstStep.SetActive(true);
         secondStep.SetActive(false);
         Wall.SetActive(false);
         thirdStep.SetActive(false);
+        InitQuestion();
     }
+
+    public void InitQuestion()
+    {
+        if (PlayerPrefs.GetInt("init") == 0)
+        {
+            Question initQues = GetComponent<Question>();
+            initQuesData = initQues.InitQuestion();
+            Question.Questiondata WriteQuesData = initQues.InitQuestion();
+            int temp = initQuesData.objects.Length;
+            Debug.Log(temp);
+
+            int j = 0;
+
+            for(int i = 0; i< temp; i++)
+            {
+                if(initQuesData.objects[i].Type == 2)
+                {
+                    j++;
+                }
+            }
+            
+            questions = new Question.QuesData[j];
+            //Debug.Log(initQuesData.objects[0].Text);
+
+            //questions = new Questions[temp];
+            for (int i = 0; i < temp; i++)
+            {
+                //Debug.Log(initQuesData.objects[i].Type);
+                //Debug.Log(i);
+                if(initQuesData.objects[i].Type == 2)
+                {
+                    questions[j-1] = initQuesData.objects[i];
+                    j--;
+                }
+                PlayerPrefs.SetInt("init", 1);
+                //string a = initQuesData.objects[i].CorrectAnswer;
+                //Debug.Log(a);           
+                //WriteQuesData.objects[i].Text = initQuesData.objects[i].Text;
+                //WriteQuesData.objects[i].CorrectAnswer = initQuesData.objects[i].CorrectAnswer;             
+            }
+            //string json = JsonUtility.ToJson(WriteQuesData);
+
+            //File.WriteAllText(Application.dataPath + "/RemainQuestion.json", json);
+            //PlayerPrefs.SetInt("init", 1);
+        }
+    }
+
     private void Start()
     {
         if (unansweredQuestions == null || unansweredQuestions.Count == 0)
         {
-            unansweredQuestions = questions.ToList<Questions>();
+            PlayerPrefs.SetInt("init", 0);
+            InitQuestion();
+
+            unansweredQuestions = questions.ToList<Question.QuesData>();
         }
         SetRamdomQuestion();
     }
@@ -45,7 +101,7 @@ public class GameManager : MonoBehaviour
     {
         int curQuestionIndex = Random.Range(0, unansweredQuestions.Count);
         curQuestion = unansweredQuestions[curQuestionIndex];
-        questionText.text = unansweredQuestions[curQuestionIndex].fact;
+        questionText.text = unansweredQuestions[curQuestionIndex].Text;
     }
 
    
@@ -90,10 +146,11 @@ public class GameManager : MonoBehaviour
     }
 
 
+
     // Lần sau nhớ tách các thuộc tính riêng nha :))
     public void UserSelectTrue()
     {
-        if(curQuestion.isTrue)
+        if(curQuestion.CorrectAnswer == "Đúng")
         {
             PlayerPrefabConfigs.SetScore += 10;
             anmt.SetTrigger("trueRight");
@@ -108,7 +165,7 @@ public class GameManager : MonoBehaviour
 
     public void UserSelectFalse()
     {
-        if (!curQuestion.isTrue)
+        if (curQuestion.CorrectAnswer == "Sai" )
         {
             PlayerPrefabConfigs.SetScore += 10;
             anmt.SetTrigger("falseTrue");

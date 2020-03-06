@@ -20,8 +20,6 @@ public class EventButton : MonoBehaviour
     {
         FindObjectOfType<GameManager1>().pnlQuestion.SetActive(false);
         FindObjectOfType<GameManager1>().isPause = false;
-
-
         FindObjectOfType<GameManager1>().point += 20;
         FindObjectOfType<GameManager1>().txtpoint.text = "Point: " + FindObjectOfType<GameManager1>().point;
 
@@ -46,6 +44,8 @@ public class EventButton : MonoBehaviour
     }
     IEnumerator _AC()
     {
+
+
         yield return new WaitForSeconds(2); //cho 5s
 
         iconAC.SetActive(false);
@@ -57,6 +57,7 @@ public class EventButton : MonoBehaviour
         Application.LoadLevel("endgame1");
     }
 
+    
 
     public void _Wrong()
     {
@@ -100,14 +101,6 @@ public class EventButton : MonoBehaviour
     {
         Application.LoadLevel("gameplay1");
     }
-    void Start()
-    {
-        
-    }
+    
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

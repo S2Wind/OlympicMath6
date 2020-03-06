@@ -2327,13 +2327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a7e3dec18f990e42bdaf76df229de9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questions:
-  - fact: Belive me!
-    isTrue: 0
-  - fact: This's it!
-    isTrue: 1
-  - fact: Not That!
-    isTrue: 1
+  questions: []
   timeBetweenTransitions: 1
   questionText: {fileID: 480920885}
   anmt: {fileID: 1740808587}
@@ -2363,7 +2357,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 772766004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d91acf51bd4ca384bba28d3c2f6488c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d94501a784f0804e80493b702e80585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &794540340

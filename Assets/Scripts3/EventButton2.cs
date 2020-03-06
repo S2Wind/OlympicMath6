@@ -18,6 +18,7 @@ public class EventButton2 : MonoBehaviour
     public GameObject ga8;
     public GameObject ga9;
     public GameObject ga10;
+    public float timeBetweenTrans = 1.9f;
 
     public void _btnAC()
     {
@@ -60,13 +61,13 @@ public class EventButton2 : MonoBehaviour
     }
     IEnumerator _AC()
     {
-        yield return new WaitForSeconds(2); //cho 2s
+        yield return new WaitForSeconds(timeBetweenTrans); //cho 2s
 
         iconAC.SetActive(false);
     }
     IEnumerator _EndGame()
     {
-        yield return new WaitForSeconds(3); //cho 3s
+        yield return new WaitForSeconds(timeBetweenTrans); //cho 3s
         Application.LoadLevel("endgame2");
     }
 

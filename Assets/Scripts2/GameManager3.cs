@@ -23,40 +23,104 @@ public class GameManager3 : MonoBehaviour
     [SerializeField] GameObject guildPanel;
 
     [Header("Q/A")]
-    [SerializeField] QuestionsOfGame2[] question;
+    [SerializeField] Question.QuesData[] questions;
 
     [SerializeField] TextMeshProUGUI ques;
 
     [SerializeField] TextMeshProUGUI[] answer;
 
-    static List<QuestionsOfGame2> unanswerQuestions;
+    static List<Question.QuesData> unanswerQuestions;
 
-    QuestionsOfGame2 curQues;
+    Question.QuesData curQues;
     [Header("Some Configs")]
     [SerializeField] float timeBetweenTransition = 1f;
 
     [SerializeField] GameObject blockClicked;
 
     MainGameManager mainGameManager;
- 
+
+    Question.Questiondata initQuesData;
+
+    private void Awake()
+    {
+        InitQuestion();
+    }
+
+    public void InitQuestion()
+    {
+        if (PlayerPrefs.GetInt("init") == 0)
+        {
+            Question initQues = GetComponent<Question>();
+            initQuesData = initQues.InitQuestion();
+            int temp = initQuesData.objects.Length;
+            Debug.Log(temp);
+
+            int j = 0;
+
+            for (int i = 0; i < temp; i++)
+            {
+                if (initQuesData.objects[i].Type == 1)
+                {
+                    j++;
+                }
+            }
+
+            questions = new Question.QuesData[j];
+            //Debug.Log(initQuesData.objects[0].Text);
+
+            //questions = new Questions[temp];
+            for (int i = 0; i < temp; i++)
+            {
+                //Debug.Log(initQuesData.objects[i].Type);
+                //Debug.Log(i);
+                if (initQuesData.objects[i].Type == 1)
+                {
+                    questions[j - 1] = initQuesData.objects[i];
+                    j--;
+                }
+                PlayerPrefs.SetInt("init", 1);
+                //string a = initQuesData.objects[i].CorrectAnswer;
+                //Debug.Log(a);           
+                //WriteQuesData.objects[i].Text = initQuesData.objects[i].Text;
+                //WriteQuesData.objects[i].CorrectAnswer = initQuesData.objects[i].CorrectAnswer;             
+            }
+            //string json = JsonUtility.ToJson(WriteQuesData);
+
+            //File.WriteAllText(Application.dataPath + "/RemainQuestion.json", json);
+            PlayerPrefs.SetInt("init", 1);
+        }
+    }
+
+
     void Start()
     {
         mainGameManager = GetComponent<MainGameManager>();
         ActivePanel();
+        if (unanswerQuestions == null || unanswerQuestions.Count == 0)
+        {
+            PlayerPrefs.SetInt("init", 0);
+            InitQuestion();
+            unanswerQuestions = questions.ToList<Question.QuesData>();
+        }
         SetRandomQuestionAnswer();
     }
 
     private void SetRandomQuestionAnswer()
-    {
-        unanswerQuestions = question.ToList<QuestionsOfGame2>();
-        int randomIndex = Random.Range(0, unanswerQuestions.Count);
-        curQues = unanswerQuestions[randomIndex];
-        ques.text = curQues.question;
-        answer[0].text = curQues.answer1;
-        answer[1].text = curQues.answer2;
-        answer[2].text = curQues.answer3;
-        answer[3].text = curQues.answer4;
+    {     
+            int randomIndex = Random.Range(0, unanswerQuestions.Count);
+            curQues = unanswerQuestions[randomIndex];
+            ques.text = curQues.Text;
+            answer[0].text = curQues.A;
+            answer[1].text = curQues.B;
+            answer[2].text = curQues.C;
+            answer[3].text = curQues.D;
     }
+
+    //UPPPPPPP
+    //
+    //
+
+    //
 
     public void CheckAsIfAnswerTrue()
     {
@@ -69,7 +133,7 @@ public class GameManager3 : MonoBehaviour
         AnswerPanelAnimationControl choice = FindObjectOfType<AnswerPanelAnimationControl>();
         choice.SetAnimation(StringAnswerChange());
         string a = GetComponent<WhatButtonIsPressed>().ButtonIHit();
-        if (IntAnswerChange(a[0]) == curQues.trueAnswer)
+        if (a[0].ToString() == curQues.CorrectAnswer)
         {
             ques.text = "Chính Xác";
             blockClicked.gameObject.SetActive(false);
@@ -88,19 +152,19 @@ public class GameManager3 : MonoBehaviour
     private string StringAnswerChange()
     {
         string a = null;
-        if (curQues.trueAnswer == 0)
+        if (curQues.CorrectAnswer == "A")
         {
             a = "ATrue";
         }
-        if (curQues.trueAnswer == 1)
+        if (curQues.CorrectAnswer == "B")
         {
             a =  "BTrue";
         }
-        if (curQues.trueAnswer == 2)
+        if (curQues.CorrectAnswer == "C")
         {
             a = "CTrue";
         }
-        if (curQues.trueAnswer == 3)
+        if (curQues.CorrectAnswer == "D")
         {
             a = "DTrue";
         }
