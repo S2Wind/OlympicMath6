@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager7 : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class GameManager7 : MonoBehaviour
     Question.Questiondata initQuesData;
     private void Awake()
     {
+        FindObjectOfType<Clock4>().SetClock(20, 0);
         InitQuestion();
     }
 
@@ -68,6 +70,11 @@ public class GameManager7 : MonoBehaviour
         }
     }
 
+    public void TimeOut()
+    {
+        SceneManager.LoadScene("endgame3");
+    }
+
     public void CheckIfItTrueOrNot()
     {
         string a = GetComponent<WhatButtonIsPressed>().ButtonIHit();
@@ -80,6 +87,7 @@ public class GameManager7 : MonoBehaviour
         {
             FindObjectOfType<EventButton3>()._Wr();
         }
+        SetRandomQuestionAnswer();
 
     }
     void Start()

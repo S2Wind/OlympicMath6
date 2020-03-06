@@ -47,6 +47,7 @@ public class GameManager3 : MonoBehaviour
 
     private void Awake()
     {
+        FindObjectOfType<Clocks>().SetClock(0,15);
         InitQuestion();
         blockLeft = 9;
     }
@@ -113,9 +114,14 @@ public class GameManager3 : MonoBehaviour
         SetRandomQuestionAnswer();
     }
 
+    public void TimeOut()
+    {
+        if(FindObjectOfType<Clocks>().timeOver)
+            StartCoroutine(ReStart());
+    }
     
 
-    private void GameControlBlock()
+    public void GameControlBlock()
     {
         Block[] obj = FindObjectsOfType<Block>();
         int c = 0;
@@ -129,7 +135,6 @@ public class GameManager3 : MonoBehaviour
         if (c == blockLeft)
         {
             StartCoroutine(ReStart());
-            
         }
     }
 

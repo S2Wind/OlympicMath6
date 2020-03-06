@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager2 : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class GameManager2 : MonoBehaviour
 
     private void Awake()
     {
+        FindObjectOfType<Clock3>().SetClock(20, 1);
         InitQuestion();
     }
 
@@ -80,6 +82,12 @@ public class GameManager2 : MonoBehaviour
         }
     }
 
+
+    public void TimeOut()
+    {
+        SceneManager.LoadScene("endgame2");
+    }
+
     public void CheckIfItTrueOrNot()
     {
         string a = GetComponent<WhatButtonIsPressed>().ButtonIHit();
@@ -87,12 +95,14 @@ public class GameManager2 : MonoBehaviour
         if (a[0].ToString() == curQues.CorrectAnswer)
         {
             FindObjectOfType<EventButton2>()._btnAC();
+            if (PlayerPrefs.GetInt("high2") < point)
+                PlayerPrefs.SetInt("high2",point);
         }
         else
         {
             FindObjectOfType<EventButton2>()._Wrong();
         }
-
+        SetRandomQuestionAnswer();
     }
 
     IEnumerator _DisplayMainPanel()

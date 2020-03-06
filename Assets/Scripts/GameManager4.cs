@@ -123,7 +123,9 @@ public class GameManager4 : MonoBehaviour
             FalseSelection();
         else
             UnsureSelection();
+        questionText.text = "Sai mất rôi ??!";
         yield return new WaitForSeconds(timeBetweenTransitions);
+        questionText.text = curQuestion.Text;
         firstStep.SetActive(false);
         secondStep.SetActive(true);
         Wall.SetActive(false);
@@ -153,7 +155,7 @@ public class GameManager4 : MonoBehaviour
         {
             PlayerPrefabConfigs.SetScore += 10;
             anmt.SetTrigger("trueRight");
-            questionText.text = "Chính xác rồi bạn ơi ! khắc phục cái lỗi mà trong API Unity không được rồi . toString nhá ! nhưng vẫn méo hiểu tại sao lại không được luôn á@&$^**!*@$&@$@&(%$ !";
+            questionText.text = "Chính Xác!";
             StartCoroutine("TransitionToNextQuestion");
         }
         else
@@ -206,6 +208,7 @@ public class GameManager4 : MonoBehaviour
         questionText.text = "The Answer is ...";
         secondStep.SetActive(false);
         yield return new WaitForSeconds(timeBetweenTransitions);
+        questionText.text = "Tự học là một đức tính tốt!";
         thirdStep.SetActive(true);
     }
 

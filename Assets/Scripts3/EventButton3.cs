@@ -35,6 +35,8 @@ public class EventButton3 : MonoBehaviour
     {
         point += 10;
         txtPoint.text = "Point: " + point.ToString();
+        if (point > PlayerPrefs.GetInt("high3"))
+            PlayerPrefs.SetInt("high3", point);
 
         btnAnswerA.SetActive(false);
         btnAnswerB.SetActive(false);
@@ -93,9 +95,4 @@ public class EventButton3 : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

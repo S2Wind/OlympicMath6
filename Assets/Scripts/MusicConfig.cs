@@ -5,6 +5,8 @@ public class MusicConfig : MonoBehaviour
     const string GAMEMUSIC_KEY = "GameMusic_Key";
     const string MUSIC_KEY = "Music_Key";
 
+    
+
     public static void SetGameMusicKey(float vol)
     {
         if(vol >= 0 && vol <=1)
@@ -26,7 +28,7 @@ public class MusicConfig : MonoBehaviour
     {
         if (vol >= 0 && vol <= 1)
         {
-            PlayerPrefs.SetFloat(GAMEMUSIC_KEY, vol);
+            PlayerPrefs.SetFloat(MUSIC_KEY, vol);
         }
         else
         {
