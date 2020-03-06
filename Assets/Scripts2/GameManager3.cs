@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Linq;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager3 : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class GameManager3 : MonoBehaviour
     static List<Question.QuesData> unanswerQuestions;
 
     Question.QuesData curQues;
+
     [Header("Some Configs")]
     [SerializeField] float timeBetweenTransition = 1f;
 
@@ -41,9 +43,12 @@ public class GameManager3 : MonoBehaviour
 
     Question.Questiondata initQuesData;
 
+    int blockLeft = 9;
+
     private void Awake()
     {
         InitQuestion();
+        blockLeft = 9;
     }
 
     public void InitQuestion()
@@ -53,7 +58,6 @@ public class GameManager3 : MonoBehaviour
             Question initQues = GetComponent<Question>();
             initQuesData = initQues.InitQuestion();
             int temp = initQuesData.objects.Length;
-            Debug.Log(temp);
 
             int j = 0;
 
@@ -64,7 +68,7 @@ public class GameManager3 : MonoBehaviour
                     j++;
                 }
             }
-
+            Debug.Log(j);
             questions = new Question.QuesData[j];
             //Debug.Log(initQuesData.objects[0].Text);
 
@@ -78,7 +82,6 @@ public class GameManager3 : MonoBehaviour
                     questions[j - 1] = initQuesData.objects[i];
                     j--;
                 }
-                PlayerPrefs.SetInt("init", 1);
                 //string a = initQuesData.objects[i].CorrectAnswer;
                 //Debug.Log(a);           
                 //WriteQuesData.objects[i].Text = initQuesData.objects[i].Text;
@@ -94,6 +97,11 @@ public class GameManager3 : MonoBehaviour
 
     void Start()
     {
+        Block[] obj = FindObjectsOfType<Block>();
+        for (int i = 0; i < obj.Length; i++)
+        {
+            obj[i].SetIsAnswered = false;
+        }
         mainGameManager = GetComponent<MainGameManager>();
         ActivePanel();
         if (unanswerQuestions == null || unanswerQuestions.Count == 0)
@@ -103,6 +111,33 @@ public class GameManager3 : MonoBehaviour
             unanswerQuestions = questions.ToList<Question.QuesData>();
         }
         SetRandomQuestionAnswer();
+    }
+
+    
+
+    private void GameControlBlock()
+    {
+        Block[] obj = FindObjectsOfType<Block>();
+        int c = 0;
+        Debug.Log("S: " + obj.Length);
+        for (int i = 0; i < obj.Length; i++)
+        {
+            if (obj[i].GetIsAnswered())
+                c++;
+        }
+        Debug.Log(c);
+        if (c == blockLeft)
+        {
+            StartCoroutine(ReStart());
+            
+        }
+    }
+
+    IEnumerator ReStart()
+    {
+        PlayerPrefs.SetInt("score5", PlayerPrefs.GetInt("score5") + (9 - blockLeft) * 5);
+        yield return new WaitForSeconds(timeBetweenTransition);
+        SceneManager.LoadScene("Game5");
     }
 
     private void SetRandomQuestionAnswer()
@@ -116,12 +151,6 @@ public class GameManager3 : MonoBehaviour
             answer[3].text = curQues.D;
     }
 
-    //UPPPPPPP
-    //
-    //
-
-    //
-
     public void CheckAsIfAnswerTrue()
     {
         StartCoroutine(WaitForAnswer());
@@ -131,45 +160,27 @@ public class GameManager3 : MonoBehaviour
     IEnumerator WaitForAnswer()
     {
         AnswerPanelAnimationControl choice = FindObjectOfType<AnswerPanelAnimationControl>();
-        choice.SetAnimation(StringAnswerChange());
+        choice.SetAnimation(curQues.CorrectAnswer+"True");
         string a = GetComponent<WhatButtonIsPressed>().ButtonIHit();
         if (a[0].ToString() == curQues.CorrectAnswer)
         {
             ques.text = "Chính Xác";
             blockClicked.gameObject.SetActive(false);
+            PlayerPrefs.SetInt("score5", PlayerPrefs.GetInt("score5") + 10);
+            blockLeft--;
         }
         else
         {
             blockClicked.GetComponent<Image>().color = Color.red;
-            blockClicked.GetComponent<Block>().SetIsAnswered = true;
+            PlayerPrefs.SetInt("score5", PlayerPrefs.GetInt("score5") - 5);
             ques.text = "Sai mất rồi!";
         }
+        blockClicked.GetComponent<Block>().SetIsAnswered = true;
         yield return new WaitForSeconds(timeBetweenTransition);
         ActivePanel();
+        GameControlBlock();
     }
 
-
-    private string StringAnswerChange()
-    {
-        string a = null;
-        if (curQues.CorrectAnswer == "A")
-        {
-            a = "ATrue";
-        }
-        if (curQues.CorrectAnswer == "B")
-        {
-            a =  "BTrue";
-        }
-        if (curQues.CorrectAnswer == "C")
-        {
-            a = "CTrue";
-        }
-        if (curQues.CorrectAnswer == "D")
-        {
-            a = "DTrue";
-        }
-        return a;
-    }
 
     int IntAnswerChange(char a)
     {
@@ -214,7 +225,7 @@ public class GameManager3 : MonoBehaviour
 
     public void UserSelectReturnButton()
     {
-        Debug.Log("Back To Menu");
+        SceneManager.LoadScene(0);
     }
 
     public void UserSelectMusicButton()

@@ -4,6 +4,8 @@ public class PlayerPrefabConfigs : MonoBehaviour
 {
     const string SCORE_KEY = "score";
 
+    const string SCORE5_KEY = "score5";
+
     const string INIT_KEY = "init";
 
     public static int SetInit
@@ -16,7 +18,18 @@ public class PlayerPrefabConfigs : MonoBehaviour
     {
         return PlayerPrefs.GetInt(INIT_KEY);
     }
-    
+
+    public static int SetScore5
+    {
+        get { return PlayerPrefs.GetInt(SCORE5_KEY); }
+        set { PlayerPrefs.SetInt(SCORE5_KEY, value); }
+    }
+
+    public static int GetScore5()
+    {
+        return PlayerPrefs.GetInt(SCORE5_KEY);
+    }
+
     public static int SetScore
     {
         get { return PlayerPrefs.GetInt(SCORE_KEY); }

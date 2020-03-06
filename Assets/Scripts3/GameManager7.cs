@@ -30,7 +30,7 @@ public class GameManager7 : MonoBehaviour
             Question initQues = GetComponent<Question>();
             initQuesData = initQues.InitQuestion();
             int temp = initQuesData.objects.Length;
-            Debug.Log(temp);
+
 
             int j = 0;
 
@@ -42,6 +42,7 @@ public class GameManager7 : MonoBehaviour
                 }
             }
 
+            Debug.Log(j);
             questions = new Question.QuesData[j];
             //Debug.Log(initQuesData.objects[0].Text);
 
@@ -55,7 +56,6 @@ public class GameManager7 : MonoBehaviour
                     questions[j - 1] = initQuesData.objects[i];
                     j--;
                 }
-                PlayerPrefs.SetInt("init", 1);
                 //string a = initQuesData.objects[i].CorrectAnswer;
                 //Debug.Log(a);           
                 //WriteQuesData.objects[i].Text = initQuesData.objects[i].Text;

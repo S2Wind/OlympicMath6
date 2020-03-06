@@ -47,7 +47,6 @@ public class GameManager4 : MonoBehaviour
             initQuesData = initQues.InitQuestion();
             Question.Questiondata WriteQuesData = initQues.InitQuestion();
             int temp = initQuesData.objects.Length;
-            Debug.Log(temp);
 
             int j = 0;
 
@@ -58,6 +57,7 @@ public class GameManager4 : MonoBehaviour
                     j++;
                 }
             }
+            Debug.Log(j);
             
             questions = new Question.QuesData[j];
             //Debug.Log(initQuesData.objects[0].Text);
@@ -72,7 +72,6 @@ public class GameManager4 : MonoBehaviour
                     questions[j-1] = initQuesData.objects[i];
                     j--;
                 }
-                PlayerPrefs.SetInt("init", 1);
                 //string a = initQuesData.objects[i].CorrectAnswer;
                 //Debug.Log(a);           
                 //WriteQuesData.objects[i].Text = initQuesData.objects[i].Text;
@@ -81,7 +80,7 @@ public class GameManager4 : MonoBehaviour
             //string json = JsonUtility.ToJson(WriteQuesData);
 
             //File.WriteAllText(Application.dataPath + "/RemainQuestion.json", json);
-            //PlayerPrefs.SetInt("init", 1);
+            PlayerPrefs.SetInt("init", 1);
         }
     }
 
@@ -208,5 +207,10 @@ public class GameManager4 : MonoBehaviour
         secondStep.SetActive(false);
         yield return new WaitForSeconds(timeBetweenTransitions);
         thirdStep.SetActive(true);
+    }
+
+    public void UserSelectBackToMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

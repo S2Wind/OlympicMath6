@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Block : MonoBehaviour
 {
-    bool isAnswered = false ;
+    [SerializeField] bool isAnswered = false ;
     public bool GetIsAnswered()
     {
         return isAnswered;

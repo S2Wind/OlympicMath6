@@ -1490,7 +1490,7 @@
     "CorrectAnswer": "Sai"
   },
   {
-    "Type": 1,
+    "Type": 2,
     "Id": 160,
     "Text": "(-3) > (-4)",
     "A": "",
@@ -1750,7 +1750,7 @@
     "CorrectAnswer": "Sai"
   },
   {
-    "Type": 1,
+    "Type": 2,
     "Id": 186,
     "Text": "Có chữ số tận cùng là chữ số chẵn chia hết cho 2",
     "A": "",
@@ -1760,7 +1760,7 @@
     "CorrectAnswer": "Đúng"
   },
   {
-    "Type": 1,
+    "Type": 2,
     "Id": 187,
     "Text": "Có chữ số tận cùng là chữ số chẵn chắc chắn chia hết cho 10",
     "A": "",
@@ -1770,7 +1770,7 @@
     "CorrectAnswer": "Sai"
   },
   {
-    "Type": 1,
+    "Type": 2,
     "Id": 188,
     "Text": "Có chữ số tận cùng là 0 hoặc 5 chia hết cho 5",
     "A": "",
@@ -1780,7 +1780,7 @@
     "CorrectAnswer": "Đúng"
   },
   {
-    "Type": 1,
+    "Type": 2,
     "Id": 189,
     "Text": "Có chữ số tận cùng là 0 hoặc 5 chia hết cho 10",
     "A": "",
