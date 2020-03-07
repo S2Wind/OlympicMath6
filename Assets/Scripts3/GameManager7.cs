@@ -82,10 +82,12 @@ public class GameManager7 : MonoBehaviour
         if (a[0].ToString() == curQues.CorrectAnswer)
         {
             FindObjectOfType<EventButton3>()._AC();
+            FindObjectOfType<MusicControler>().PlayTrue();
         }
         else
         {
             FindObjectOfType<EventButton3>()._Wr();
+            FindObjectOfType<MusicControler>().PlayWrong();
         }
         SetRandomQuestionAnswer();
 

@@ -9,32 +9,16 @@ public class MenuSettings : MonoBehaviour
     [SerializeField] GameObject settings;
     [SerializeField] GameObject back;
 
-    [SerializeField] Slider musicVolume;
-    [SerializeField] Slider gameMusicVolume;
-
-
-    private void Update()
+    private void Awake()
     {
-        MusicConfig.SetMusicKey(musicVolume.value);
-        MusicConfig.SetGameMusicKey(gameMusicVolume.value);
+        FindObjectOfType<MusicControler>().FindSlider();
     }
+
     public void UserSelectSetting()
     {
         menu.SetActive(false);
         settings.SetActive(true);
         back.SetActive(true);
-        musicVolume.value = MusicConfig.GetMusicKey();
-        Debug.Log(MusicConfig.GetMusicKey());
-        gameMusicVolume.value = MusicConfig.GetGameMusicKey();
-        Debug.Log(MusicConfig.GetGameMusicKey());
-        if (PlayerPrefs.HasKey("Music_Key"))
-        {
-            MusicConfig.SetMusicKey(0.6f);
-        }
-        if (PlayerPrefs.HasKey("GameMusic_Key"))
-        {
-            MusicConfig.SetGameMusicKey(0.6f);
-        }
     }
 
     public void UserSelectBackMenu()
@@ -43,4 +27,6 @@ public class MenuSettings : MonoBehaviour
         settings.SetActive(false);
         back.SetActive(false);
     }
+
+
 }

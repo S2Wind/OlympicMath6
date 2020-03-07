@@ -92,12 +92,14 @@ public class GameManager1 : MonoBehaviour
         if(a[0].ToString() == curQues.CorrectAnswer)
         {
             FindObjectOfType<EventButton>()._Accepted();
+            FindObjectOfType<MusicControler>().PlayTrue();
             if (PlayerPrefs.GetInt("high1") < point)
                 PlayerPrefs.SetInt("high1", point);
         }
         else
         {
             FindObjectOfType<EventButton>()._Wrong();
+            FindObjectOfType<MusicControler>().PlayWrong();
         }
         SetRandomQuestionAnswer();
 
@@ -143,6 +145,16 @@ public class GameManager1 : MonoBehaviour
         answer[1].text = curQues.B;
         answer[2].text = curQues.C;
         answer[3].text = curQues.D;
+    }
+
+    public void Return()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
 }

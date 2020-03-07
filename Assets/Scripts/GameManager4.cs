@@ -108,6 +108,7 @@ public class GameManager4 : MonoBehaviour
     {
         unansweredQuestions.Remove(curQuestion);
         Wall.SetActive(true);
+        FindObjectOfType<MusicControler>().PlayOther();
         yield return new WaitForSeconds(timeBetweenTransitions);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
@@ -124,6 +125,10 @@ public class GameManager4 : MonoBehaviour
         else
             UnsureSelection();
         questionText.text = "Sai mất rôi ??!";
+        if (i != 3)
+            FindObjectOfType<MusicControler>().PlayWrong();
+        else
+            FindObjectOfType<MusicControler>().PlayUnsure();
         yield return new WaitForSeconds(timeBetweenTransitions);
         questionText.text = curQuestion.Text;
         firstStep.SetActive(false);
@@ -156,7 +161,9 @@ public class GameManager4 : MonoBehaviour
             PlayerPrefabConfigs.SetScore += 10;
             anmt.SetTrigger("trueRight");
             questionText.text = "Chính Xác!";
+            FindObjectOfType<MusicControler>().PlayTrue();
             StartCoroutine("TransitionToNextQuestion");
+            
         }
         else
         {
@@ -168,10 +175,12 @@ public class GameManager4 : MonoBehaviour
     {
         if (curQuestion.CorrectAnswer == "Sai" )
         {
+            
             PlayerPrefabConfigs.SetScore += 10;
             anmt.SetTrigger("falseTrue");
             questionText.text = "Chính xác!";
             //anmt.SetTrigger();
+            FindObjectOfType<MusicControler>().PlayTrue();
             StartCoroutine("TransitionToNextQuestion");
         }
         else
@@ -205,9 +214,11 @@ public class GameManager4 : MonoBehaviour
 
     IEnumerator ShowAnswer()
     {
+        FindObjectOfType<MusicControler>().PlayOther();
         questionText.text = "The Answer is ...";
         secondStep.SetActive(false);
         yield return new WaitForSeconds(timeBetweenTransitions);
+        FindObjectOfType<MusicControler>().PlayUnsure();
         questionText.text = "Tự học là một đức tính tốt!";
         thirdStep.SetActive(true);
     }

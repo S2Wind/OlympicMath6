@@ -23,6 +23,10 @@ public class GameManager3 : MonoBehaviour
 
     [SerializeField] GameObject guildPanel;
 
+    [SerializeField] GameObject ExitPanel;
+
+    [SerializeField] GameObject clock;
+
     [Header("Q/A")]
     [SerializeField] Question.QuesData[] questions;
 
@@ -47,7 +51,7 @@ public class GameManager3 : MonoBehaviour
 
     private void Awake()
     {
-        FindObjectOfType<Clocks>().SetClock(0,15);
+        FindObjectOfType<Clocks>().SetClock(20,1);
         InitQuestion();
         blockLeft = 9;
     }
@@ -170,6 +174,7 @@ public class GameManager3 : MonoBehaviour
         if (a[0].ToString() == curQues.CorrectAnswer)
         {
             ques.text = "Chính Xác";
+            FindObjectOfType<MusicControler>().PlayTrue();
             blockClicked.gameObject.SetActive(false);
             PlayerPrefs.SetInt("score5", PlayerPrefs.GetInt("score5") + 10);
             blockLeft--;
@@ -179,6 +184,7 @@ public class GameManager3 : MonoBehaviour
             blockClicked.GetComponent<Image>().color = Color.red;
             PlayerPrefs.SetInt("score5", PlayerPrefs.GetInt("score5") - 5);
             ques.text = "Sai mất rồi!";
+            FindObjectOfType<MusicControler>().PlayWrong();
         }
         blockClicked.GetComponent<Block>().SetIsAnswered = true;
         yield return new WaitForSeconds(timeBetweenTransition);
@@ -206,17 +212,19 @@ public class GameManager3 : MonoBehaviour
     public void ActivePanel()
     {
         
-            bodyPanel.SetActive(true);
-            questionPanel.SetActive(false);
-            answerPanel.SetActive(false);
+        bodyPanel.SetActive(true);
+        questionPanel.SetActive(false);
+        answerPanel.SetActive(false);
         menu.SetActive(true);
         gameManager.SetActive(true);
         cuteThing.SetActive(true);
+        ExitPanel.SetActive(false);
     }
 
     public void ActiveQuestionPanel()
     {
         string a = GetComponent<WhatButtonIsPressed>().ButtonIHit();
+        FindObjectOfType<MusicControler>().PlayOther();
         blockClicked = GameObject.Find(a[0].ToString());
         if (!blockClicked.GetComponent<Block>().GetIsAnswered())
         {
@@ -229,6 +237,26 @@ public class GameManager3 : MonoBehaviour
 
 
     public void UserSelectReturnButton()
+    {
+        bodyPanel.SetActive(false);
+        questionPanel.SetActive(false);
+        answerPanel.SetActive(false);
+        menu.SetActive(false);
+        gameManager.SetActive(false);
+        cuteThing.SetActive(false);
+        ExitPanel.SetActive(true);
+    }
+
+    public void UserSelectCancel()
+    {
+        bodyPanel.SetActive(true);
+        menu.SetActive(true);
+        gameManager.SetActive(true);
+        cuteThing.SetActive(true);
+        ExitPanel.SetActive(false);
+    }
+
+    public void UserSelectReturnMenu()
     {
         SceneManager.LoadScene(0);
     }
@@ -247,5 +275,19 @@ public class GameManager3 : MonoBehaviour
         questionPanel.SetActive(false);
         answerPanel.SetActive(false);
         gameManager.SetActive(false);
+    }
+
+    public void UserSelectDone()
+    {
+        guildPanel.SetActive(false);
+        bodyPanel.SetActive(true);
+        menu.SetActive(true);
+        gameManager.SetActive(true);
+        cuteThing.SetActive(true);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

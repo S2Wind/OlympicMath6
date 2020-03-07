@@ -95,12 +95,14 @@ public class GameManager2 : MonoBehaviour
         if (a[0].ToString() == curQues.CorrectAnswer)
         {
             FindObjectOfType<EventButton2>()._btnAC();
+            FindObjectOfType<MusicControler>().PlayTrue();
             if (PlayerPrefs.GetInt("high2") < point)
                 PlayerPrefs.SetInt("high2",point);
         }
         else
         {
             FindObjectOfType<EventButton2>()._Wrong();
+            FindObjectOfType<MusicControler>().PlayWrong();
         }
         SetRandomQuestionAnswer();
     }
