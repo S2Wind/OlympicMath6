@@ -10,11 +10,11 @@ public class SaveHighScore : MonoBehaviour
 
     void Awake()
     {
-        textGUI[0].text = PlayerPrefs.GetInt("high1").ToString();
-        textGUI[1].text = PlayerPrefs.GetInt("high2").ToString();
-        textGUI[2].text = PlayerPrefs.GetInt("high3").ToString();
-        textGUI[3].text = PlayerPrefabConfigs.GetScore().ToString();
-        textGUI[4].text = PlayerPrefs.GetInt("high5").ToString();
+        textGUI[0].text = "Điểm cao\n" + PlayerPrefs.GetInt("high1").ToString();
+        textGUI[1].text = "Điểm cao\n" + PlayerPrefs.GetInt("high2").ToString();
+        textGUI[2].text = "Điểm cao\n" + PlayerPrefs.GetInt("high3").ToString();
+        textGUI[3].text = "Điểm cao\n" + PlayerPrefabConfigs.GetScore().ToString();
+        textGUI[4].text = "Điểm cao\n" + PlayerPrefs.GetInt("high5").ToString();
     }
 
 }

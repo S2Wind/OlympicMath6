@@ -9,9 +9,27 @@ public class MenuSettings : MonoBehaviour
     [SerializeField] GameObject settings;
     [SerializeField] GameObject back;
 
-    private void Awake()
+    [SerializeField] Slider music;
+    [SerializeField] Slider gameMusic;
+
+    [SerializeField] AudioClip clip;
+
+    public void SetMusic(float a)
     {
-        FindObjectOfType<MusicControler>().FindSlider();
+        music.value = a;
+    }
+
+    public void SetGameMusic(float a)
+    {
+        gameMusic.value = a;
+    }
+
+
+    private void Start()
+    {
+        FindObjectOfType<MusicControler>().canChangeScene = true;
+        FindObjectOfType<MusicControler>().GetSlider(music, gameMusic);
+        FindObjectOfType<MusicControler>().PlayBackTrack(clip);
     }
 
     public void UserSelectSetting()

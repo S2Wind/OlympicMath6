@@ -3,7 +3,11 @@
 //allow us to edit question not in here , but in Unity API
 public class Questions 
 {
-    //This is where Questions place
-    public string fact;
-    public bool isTrue;
+    public int Type;
+    public string Text;
+    public string A;
+    public string B;
+    public string C;
+    public string D;
+    public string CorrectAnswer;
 }

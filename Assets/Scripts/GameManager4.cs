@@ -9,11 +9,11 @@ using System.IO;
 //Tinh toan lai cach tinh diem cong cho game Ok 
 public class GameManager4 : MonoBehaviour
 {
-    [SerializeField] Question.QuesData[] questions ;
+    [SerializeField] Questions[] questions ;
 
-    private static List<Question.QuesData> unansweredQuestions;
+    private static List<Questions> unansweredQuestions;
 
-    Question.QuesData curQuestion;
+    Questions curQuestion;
 
     //Question.Questiondata 
 
@@ -28,7 +28,7 @@ public class GameManager4 : MonoBehaviour
     [SerializeField] GameObject Wall;
     [SerializeField] GameObject thirdStep;
 
-    Question.Questiondata initQuesData;
+    //Question.Questiondata initQuesData;
 
     private void Awake()
     {
@@ -41,46 +41,24 @@ public class GameManager4 : MonoBehaviour
 
     public void InitQuestion()
     {
-        if (PlayerPrefs.GetInt("init") == 0)
+        StartQuestion ques = FindObjectOfType<StartQuestion>();
+        int j = 0;
+        Debug.Log(ques.questions.Length);
+        for(int i = 0;i < ques.questions.Length;i++)
         {
-            Question initQues = GetComponent<Question>();
-            initQuesData = initQues.InitQuestion();
-            Question.Questiondata WriteQuesData = initQues.InitQuestion();
-            int temp = initQuesData.objects.Length;
-
-            int j = 0;
-
-            for(int i = 0; i< temp; i++)
+            if (ques.questions[i].Type == 2)
             {
-                if(initQuesData.objects[i].Type == 2)
-                {
-                    j++;
-                }
+                j++;
             }
-            Debug.Log(j);
-            
-            questions = new Question.QuesData[j];
-            //Debug.Log(initQuesData.objects[0].Text);
-
-            //questions = new Questions[temp];
-            for (int i = 0; i < temp; i++)
+        }
+        questions = new Questions[j];
+        for (int i = 0; i < ques.questions.Length; i++)
+        {
+            if (ques.questions[i].Type == 2)
             {
-                //Debug.Log(initQuesData.objects[i].Type);
-                //Debug.Log(i);
-                if(initQuesData.objects[i].Type == 2)
-                {
-                    questions[j-1] = initQuesData.objects[i];
-                    j--;
-                }
-                //string a = initQuesData.objects[i].CorrectAnswer;
-                //Debug.Log(a);           
-                //WriteQuesData.objects[i].Text = initQuesData.objects[i].Text;
-                //WriteQuesData.objects[i].CorrectAnswer = initQuesData.objects[i].CorrectAnswer;             
+                questions[j-1] = ques.questions[i];
+                j--;
             }
-            //string json = JsonUtility.ToJson(WriteQuesData);
-
-            //File.WriteAllText(Application.dataPath + "/RemainQuestion.json", json);
-            PlayerPrefs.SetInt("init", 1);
         }
     }
 
@@ -88,10 +66,9 @@ public class GameManager4 : MonoBehaviour
     {
         if (unansweredQuestions == null || unansweredQuestions.Count == 0)
         {
-            PlayerPrefs.SetInt("init", 0);
             InitQuestion();
 
-            unansweredQuestions = questions.ToList<Question.QuesData>();
+            unansweredQuestions = questions.ToList<Questions>();
         }
         SetRamdomQuestion();
     }
@@ -156,7 +133,7 @@ public class GameManager4 : MonoBehaviour
     // Lần sau nhớ tách các thuộc tính riêng nha :))
     public void UserSelectTrue()
     {
-        if(curQuestion.CorrectAnswer == "Đúng")
+        if(curQuestion.CorrectAnswer.Length == 4)
         {
             PlayerPrefabConfigs.SetScore += 10;
             anmt.SetTrigger("trueRight");
@@ -173,7 +150,7 @@ public class GameManager4 : MonoBehaviour
 
     public void UserSelectFalse()
     {
-        if (curQuestion.CorrectAnswer == "Sai" )
+        if (curQuestion.CorrectAnswer[0].ToString() == "S")
         {
             
             PlayerPrefabConfigs.SetScore += 10;
@@ -198,6 +175,12 @@ public class GameManager4 : MonoBehaviour
 
     public void UserSelectAgain()
     {
+        StartCoroutine(AgainChoice());
+    }
+
+    IEnumerator AgainChoice()
+    {
+        yield return new WaitForSeconds(timeBetweenTransitions);
         secondStep.SetActive(false);
         firstStep.SetActive(true);
     }

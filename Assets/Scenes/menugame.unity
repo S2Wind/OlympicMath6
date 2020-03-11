@@ -356,7 +356,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -59.5}
+  m_AnchoredPosition: {x: 0, y: -75}
   m_SizeDelta: {x: 220, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &183425628
@@ -526,83 +526,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197946730}
-  m_CullTransparentMesh: 0
---- !u!1 &248194860
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 248194861}
-  - component: {fileID: 248194863}
-  - component: {fileID: 248194862}
-  m_Layer: 9
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &248194861
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 248194860}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 828271074}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &248194862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 248194860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Button
---- !u!222 &248194863
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 248194860}
   m_CullTransparentMesh: 0
 --- !u!1 &249857174
 GameObject:
@@ -1652,6 +1575,1593 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721429234}
   m_CullTransparentMesh: 0
+--- !u!1 &752162736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 752162738}
+  - component: {fileID: 752162737}
+  m_Layer: 0
+  m_Name: GameQuestion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &752162737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752162736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa7b1d6bbda33448b65af165e5ca0b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questions:
+  - Type: 1
+    Text: "Cho t\u1EADp h\u1EE3p M={1;2;3}. Trong c\xE1c t\u1EADp h\u1EE3p sau t\u1EADp
+      h\u1EE3p n\xE0o l\xE0 t\u1EADp h\u1EE3p con c\u1EE7a M"
+    A: M1 = {0;1}
+    B: M2 = {0;2}
+    C: M3 = {3;4}
+    D: M4 = {1;3}
+    CorrectAnswer: D
+  - Type: 1
+    Text: "\u0110i\u1EC1n s\u1ED1 th\xEDch h\u1EE3p v\xE0o ch\u1ED7 tr\u1ED1ng :
+      2007 +  ...  = 2007"
+    A: 0
+    B: 2
+    C: 1
+    D: -1
+    CorrectAnswer: A
+  - Type: 1
+    Text: "\u0110i\u1EC1n s\u1ED1 th\xEDch h\u1EE3p v\xE0o ch\u1ED7 tr\u1ED1ng: 
+      2007 - ...  = 2007"
+    A: 0
+    B: 2
+    C: 1
+    D: -1
+    CorrectAnswer: A
+  - Type: 1
+    Text: "\u0110i\u1EC1n s\u1ED1 th\xEDch h\u1EE3p v\xE0o ch\u1ED7 tr\u1ED1ng:\\r\\n2007
+      x ...\\t= 2007"
+    A: 0
+    B: 2
+    C: 1
+    D: -1
+    CorrectAnswer: C
+  - Type: 1
+    Text: "\u0110i\u1EC1n s\u1ED1 th\xEDch h\u1EE3p v\xE0o ch\u1ED7 tr\u1ED1ng:  
+      2007 :    ...   = 2007"
+    A: 0
+    B: 2
+    C: 1
+    D: -1
+    CorrectAnswer: C
+  - Type: 1
+    Text: "C\xE1ch t\xEDnh \u0111\xFAng l\xE0:"
+    A: 2^2.2^3 = 2^5
+    B: 2^2.2^3 = 2^6
+    C: 2^2.2^3 = 4^6
+    D: 2^2.2^3 = 4^5
+    CorrectAnswer: A
+  - Type: 1
+    Text: "C\xE1ch t\xEDnh \u0111\xFAng l\xE0:"
+    A: 2.4^2 = 8^2 = 64
+    B: 2.4^2 = 2.16 = 32
+    C: 2.4^2 = 2.8 = 16
+    D: 2.4^2 = 8^2 = 16
+    CorrectAnswer: B
+  - Type: 1
+    Text: "K\u1EBFt qu\u1EA3 \u0111\xFAng c\u1EE7a ph\xE9p t\xEDnh 2^6 : 2 l\xE0"
+    A: 2^7
+    B: 2^6
+    C: 2^5
+    D: 1^7
+    CorrectAnswer: C
+  - Type: 1
+    Text: 5 + (-5) * 5 / 5 - 10 = ?
+    A: 0
+    B: -10
+    C: -9
+    D: 10
+    CorrectAnswer: B
+  - Type: 1
+    Text: "Th\u1EE9 t\u1EF1 th\u1EF1c hi\u1EC7n c\xE1c ph\xE9p t\xEDnh \u0111\u1ED1i
+      v\u1EDBi bi\u1EC3u th\u1EE9c kh\xF4ng c\xF3 d\u1EA5u ngo\u1EB7c"
+    A: "1- Nh\xE2n v\xE0 chia 2- L\u0169y th\u1EEBa 3- C\u1ED9ng v\xE0 tr\u1EEB"
+    B: "1- C\u1ED9ng v\xE0 tr\u1EEB 2- Nh\xE2n v\xE0 chia\\t3- L\u0169y th\u1EEBa"
+    C: "1- C\u1ED9ng v\xE0 tr\u1EEB 2- L\u0169y th\u1EEBa 3- Nh\xE2n v\xE0 chia"
+    D: "1- L\u0169y th\u1EEBa 2- Nh\xE2n v\xE0 chia 3- C\u1ED9ng v\xE0 tr\u1EEB"
+    CorrectAnswer: D
+  - Type: 1
+    Text: "Cho t\u1EADp h\u1EE3p A={0}"
+    A: "A kh\xF4ng ph\u1EA3i l\xE0 t\u1EADp h\u1EE3p"
+    B: "A l\xE0 t\u1EADp h\u1EE3p r\u1ED7ng"
+    C: "A l\xE0 t\u1EADp h\u1EE3p c\xF3 1 ph\u1EA7n t\u1EED l\xE0 0"
+    D: "A l\xE0 t\u1EADp h\u1EE3p kh\xF4ng c\xF3 ph\u1EA7n t\u1EED n\xE0o"
+    CorrectAnswer: C
+  - Type: 1
+    Text: "H\xE3y ch\u1ECDn c\xE2u tr\u1EA3 l\u1EDDi \u0111\xFAng nh\u1EA5t   :  "
+    A: "S\u1ED1 chia h\u1EBFt cho 5 c\xF3 ch\u1EEF s\u1ED1 t\u1EADn c\xF9ng l\xE0
+      5"
+    B: "S\u1ED1 chia h\u1EBFt cho 2 c\xF3 ch\u1EEF s\u1ED1 t\u1EADn c\xF9ng l\xE0
+      8"
+    C: "S\u1ED1 c\xF3 ch\u1EEF s\u1ED1 t\u1EADn c\xF9ng l\xE0 8 th\xEC chia h\u1EBFt
+      cho 2"
+    D: "C\u1EA3 ba c\xE2u tr\xEAn \u0111\u1EC1u \u0111\xFAng"
+    CorrectAnswer: D
+  - Type: 1
+    Text: "H\xE3y ch\u1ECDn c\xE2u tr\u1EA3 l\u1EDDi \u0111\xFAng"
+    A: "S\u1ED1 0 l\xE0 \u01B0\u1EDBc c\u1EE7a m\u1ED9t s\u1ED1 t\u1EF1 nhi\xEAn
+      b\u1EA5t k\xEC"
+    B: "S\u1ED1 0 l\xE0 b\u1ED9i c\u1EE7a m\u1ECDi s\u1ED1 t\u1EF1 nhi\xEAn kh\xE1c
+      kh\xF4ng"
+    C: "S\u1ED1 0 l\xE0 h\u1EE3p s\u1ED1"
+    D: "S\u1ED1 0 l\xE0 s\u1ED1 nguy\xEAn t\u1ED1"
+    CorrectAnswer: B
+  - Type: 1
+    Text: "H\xE3y ch\u1ECDn c\xE2u tr\u1EA3 l\u1EDDi \u0111\xFAng"
+    A: "S\u1ED1 1 l\xE0 h\u1EE3p s\u1ED1"
+    B: "S\u1ED1 1 l\xE0 s\u1ED1 nguy\xEAn t\u1ED1"
+    C: "S\u1ED1 1 kh\xF4ng c\xF3 \u01B0\u1EDBc n\xE0o c\u1EA3"
+    D: "S\u1ED1 1 l\xE0 \u01B0\u1EDBc c\u1EE7a m\u1ED9t s\u1ED1 t\u1EF1 nhi\xEAn
+      b\u1EA5t k\xEC"
+    CorrectAnswer: D
+  - Type: 1
+    Text: "T\u1EADp h\u1EE3p n\xE0o ch\u1EC9 g\u1ED3m c\xE1c s\u1ED1 nguy\xEAn t\u1ED1"
+    A: '{3;5;7}'
+    B: '{3;10;7}'
+    C: '{13;15;17}'
+    D: '{1;2;5;7}'
+    CorrectAnswer: A
+  - Type: 1
+    Text: "Trong c\xE1c c\xE1ch vi\u1EBFt sau, c\xE1ch n\xE0o \u0111\u01B0\u1EE3c
+      g\u1ECDi l\xE0 ph\xE2n t\xEDch 20 ra th\u1EEBa s\u1ED1 nguy\xEAn t\u1ED1"
+    A: 20 = 4.5
+    B: 20 = 2.10
+    C: 20 = 2^2.5
+    D: 20 = 10:2
+    CorrectAnswer: C
+  - Type: 1
+    Text: "Ph\xE2n t\xEDch 24 ra th\u1EEBa s\u1ED1 nguy\xEAn t\u1ED1 - c\xE1ch t\xEDnh
+      \u0111\xFAng l\xE0:"
+    A: 24 = 4.6 = 2^2.6
+    B: 24 = 2^3.3
+    C: 24 = 24.1
+    D: 24 = 2.12
+    CorrectAnswer: B
+  - Type: 1
+    Text: "\u01AFCLN (18;60) l\xE0:"
+    A: 36
+    B: 6
+    C: 12
+    D: 30
+    CorrectAnswer: B
+  - Type: 1
+    Text: "BCNN (4;6;8) l\xE0"
+    A: 2
+    B: 12
+    C: 192
+    D: 24
+    CorrectAnswer: D
+  - Type: 1
+    Text: "BCNN(3;4;6;8;24) l\xE0:"
+    A: 24
+    B: 192
+    C: 72
+    D: 12
+    CorrectAnswer: A
+  - Type: 1
+    Text: "Trong t\u1EADp h\u1EE3p c\xE1c s\u1ED1 nguy\xEAn sau, t\u1EADp h\u1EE3p
+      n\xE0o c\xF3 c\xE1c s\u1ED1 nguy\xEAn \u0111\u01B0\u1EE3c x\u1EBFp theo th\u1EE9
+      t\u1EF1 t\u0103ng d\u1EA7n"
+    A: '{2; -17; 5; 1; -2; 0}'
+    B: '{-2; -17; 0; 1; 2; 5}'
+    C: '{0; 1; -2; 2; 5; -17}'
+    D: '{-17; -2; 0; 1; 2; 5}'
+    CorrectAnswer: D
+  - Type: 1
+    Text: "K\u1EBFt qu\u1EA3 \u0111\xFAng c\u1EE7a ph\xE9p t\xEDnh (-3) + (-6) l\xE0"
+    A: -3
+    B: +3
+    C: +9
+    D: -9
+    CorrectAnswer: D
+  - Type: 1
+    Text: "H\xE3y ch\u1ECDn c\xE2u tr\u1EA3 l\u1EDDi \u0111\xFAng"
+    A: "T\u1ED5ng hai s\u1ED1 nguy\xEAn d\u01B0\u01A1ng l\xE0 m\u1ED9t s\u1ED1 nguy\xEAn
+      d\u01B0\u01A1ng"
+    B: "T\u1ED5ng hai s\u1ED1 nguy\xEAn \xE2m l\xE0 1 s\u1ED1 nguy\xEAn d\u01B0\u01A1ng"
+    C: "T\u1ED5ng m\u1ED9t s\u1ED1 nguy\xEAn \xE2m v\xE0 m\u1ED9t s\u1ED1 nguy\xEAn
+      d\u01B0\u01A1ng l\xE0 m\u1ED9t s\u1ED1 nguy\xEAn \xE2m"
+    D: "T\u1ED5ng m\u1ED9t s\u1ED1 nguy\xEAn \xE2m v\xE0 m\u1ED9t s\u1ED1 nguy\xEAn
+      d\u01B0\u01A1ng l\xE0 m\u1ED9t s\u1ED1 nguy\xEAn d\u01B0\u01A1ng"
+    CorrectAnswer: B
+  - Type: 1
+    Text: "K\u1EBFt qu\u1EA3 \u0111\xFAng c\u1EE7a ph\xE9p t\xEDnh (-3) + (+6) l\xE0"
+    A: -3
+    B: +3
+    C: +9
+    D: -9
+    CorrectAnswer: B
+  - Type: 1
+    Text: "K\u1EBFt qu\u1EA3 \u0111\xFAng c\u1EE7a ph\xE9p t\xEDnh -3 - 5 l\xE0"
+    A: -2
+    B: +2
+    C: +8
+    D: -8
+    CorrectAnswer: D
+  - Type: 1
+    Text: "H\xE3y ch\u1ECDn c\xE2u tr\u1EA3 l\u1EDDi \u0111\xFAng   :    3 + x =
+      -2 + 3 th\xEC x = ?"
+    A: +8
+    B: -8
+    C: +2
+    D: -2
+    CorrectAnswer: D
+  - Type: 1
+    Text: "K\u1EBFt qu\u1EA3 \u0111\xFAng c\u1EE7a ph\xE9p t\xEDnh (-5).(+3) l\xE0:"
+    A: -15
+    B: +15
+    C: -8
+    D: +8
+    CorrectAnswer: A
+  - Type: 1
+    Text: "K\u1EBFt qu\u1EA3 \u0111\xFAng c\u1EE7a ph\xE9p t\xEDnh (-5).(-3) l\xE0:"
+    A: -15
+    B: +15
+    C: -8
+    D: +8
+    CorrectAnswer: B
+  - Type: 1
+    Text: "H\xE3y ch\u1ECDn c\xE2u tr\u1EA3 l\u1EDDi \u0111\xFAng:"
+    A: "T\xEDch c\u1EE7a 2 s\u1ED1 nguy\xEAn \xE2m l\xE0 m\u1ED9t s\u1ED1 nguy\xEAn
+      \xE2m"
+    B: "T\xEDch c\u1EE7a 2 s\u1ED1 nguy\xEAn d\u01B0\u01A1ng l\xE0 m\u1ED9t s\u1ED1
+      nguy\xEAn d\u01B0\u01A1ng"
+    C: "T\xEDch c\u1EE7a 1 s\u1ED1 nguy\xEAn \xE2m v\u1EDBi s\u1ED1 0 l\xE0 m\u1ED9t
+      s\u1ED1 nguy\xEAn \xE2m"
+    D: "\xEDch c\u1EE7a 1 s\u1ED1 nguy\xEAn d\u01B0\u01A1ng v\u1EDBi s\u1ED1 0 l\xE0
+      m\u1ED9t s\u1ED1 nguy\xEAn d\u01B0\u01A1ng"
+    CorrectAnswer: B
+  - Type: 1
+    Text: "Gi\xE1 tr\u1ECB \u0111\xFAng c\u1EE7a (-4)^2 l\xE0:"
+    A: -8
+    B: +8
+    C: -16
+    D: +16
+    CorrectAnswer: D
+  - Type: 1
+    Text: "Tr\xEAn t\u1EADp h\u1EE3p s\u1ED1 nguy\xEAn Z, c\xE1c \u01B0\u1EDBc c\u1EE7a
+      5 l\xE0"
+    A: "-1 v\xE0 1"
+    B: "5 v\xE0 -5"
+    C: 1; -1; 5
+    D: -1; 1; 5; -5
+    CorrectAnswer: D
+  - Type: 1
+    Text: "Trong 4 v\xED d\u1EE5 sau, v\xED d\u1EE5 n\xE0o kh\xF4ng ph\u1EA3i ph\xE2n
+      s\u1ED1"
+    A: 3/(-15)
+    B: (1.7)/3
+    C: 0/2
+    D: -13/4
+    CorrectAnswer: B
+  - Type: 1
+    Text: "Trong 4 v\xED d\u1EE5 sau, v\xED d\u1EE5 n\xE0o kh\xF4ng ph\u1EA3i ph\xE2n
+      s\u1ED1"
+    A: 3/(-4)
+    B: -3/7
+    C: 2/0
+    D: -11/(-17)
+    CorrectAnswer: C
+  - Type: 1
+    Text: "Ph\xE2n s\u1ED1 b\u1EB1ng ph\xE2n s\u1ED1  2/7 l\xE0:"
+    A: 7/2
+    B: 4/14
+    C: 25/75
+    D: 4/49
+    CorrectAnswer: B
+  - Type: 1
+    Text: "Ph\xE2n s\u1ED1 kh\xF4ng b\u1EB1ng ph\xE2n s\u1ED1  (-2)/(9) l\xE0:"
+    A: -6/27
+    B: -4/19
+    C: -10/45
+    D: 2/(-9)
+    CorrectAnswer: B
+  - Type: 1
+    Text: "Cho bi\u1EBFt  15/x = -3/4  s\u1ED1 x th\xEDch h\u1EE3p l\xE0:"
+    A: 20
+    B: -20
+    C: 63
+    D: 57
+    CorrectAnswer: B
+  - Type: 1
+    Text: "Ph\xE2n s\u1ED1 b\u1EB1ng ph\xE2n s\u1ED1  -3/4 l\xE0"
+    A: -3/(-4)
+    B: 3/(-4)
+    C: 3/4
+    D: 75/100
+    CorrectAnswer: B
+  - Type: 1
+    Text: "T\xECm ph\xE2n s\u1ED1 t\u1ED1i gi\u1EA3n trong c\xE1c ph\xE2n s\u1ED1
+      sau:"
+    A: 6/12
+    B: -4/16
+    C: -3/4
+    D: 15/20
+    CorrectAnswer: C
+  - Type: 1
+    Text: "Ph\xE2n s\u1ED1 t\u1ED1i gi\u1EA3n c\u1EE7a ph\xE2n s\u1ED1  20/(-140) 
+      l\xE0:"
+    A: 10/(-70)
+    B: 4/(-28)
+    C: 2/(-14)
+    D: 1/(-7)
+    CorrectAnswer: D
+  - Type: 1
+    Text: "K\u1EBFt qu\u1EA3 khi r\xFAt g\u1ECDn  (8.5 - 8.2)/(16) l\xE0:"
+    A: -11/2
+    B: 19
+    C: 40
+    D: 3/2
+    CorrectAnswer: D
+  - Type: 1
+    Text: "K\u1EBFt qu\u1EA3 c\u1EE7a ph\xE9p tr\u1EEB 1/27 - 1/9  l\xE0"
+    A: 0/18
+    B: 0/18
+    C: 2/27
+    D: -2/0
+    CorrectAnswer: B
+  - Type: 1
+    Text: "K\u1EBFt qu\u1EA3 c\u1EE7a ph\xE9p nh\xE2n 5*(1/4) l\xE0"
+    A: 5/20
+    B: 21/4
+    C: 1/20
+    D: 5/4
+    CorrectAnswer: D
+  - Type: 1
+    Text: "K\u1EBFt qu\u1EA3 c\u1EE7a ph\xE9p nh\xE2n  (-1/4) * (1/2) l\xE0"
+    A: -2/4
+    B: -2/16
+    C: -0/8
+    D: -1/8
+    CorrectAnswer: D
+  - Type: 1
+    Text: "H\xE3y ch\u1ECDn c\xE2u tr\u1EA3 l\u1EDDi \u0111\xFAng:"
+    A: "S\u1ED1 ngh\u1ECBch \u0111\u1EA3o c\u1EE7a -3 l\xE0 3"
+    B: "S\u1ED1 ngh\u1ECBch \u0111\u1EA3o c\u1EE7a -3 l\xE0  1/3"
+    C: "S\u1ED1 ngh\u1ECBch \u0111\u1EA3o c\u1EE7a -3 l\xE0 1/(-3)"
+    D: "Ch\u1EC9 c\xF3 c\xE2u A l\xE0 \u0111\xFAng"
+    CorrectAnswer: C
+  - Type: 1
+    Text: "H\xE3y ch\u1ECDn c\xE2u tr\u1EA3 l\u1EDDi \u0111\xFAng:"
+    A: "S\u1ED1 ngh\u1ECBch \u0111\u1EA3o c\u1EE7a -1 l\xE0 1"
+    B: "S\u1ED1 ngh\u1ECBch \u0111\u1EA3o c\u1EE7a -1 l\xE0 -1"
+    C: "S\u1ED1 ngh\u1ECBch \u0111\u1EA3o c\u1EE7a -1 l\xE0 c\u1EA3 hai s\u1ED1 1
+      v\xE0 -1"
+    D: "Kh\xF4ng c\xF3 s\u1ED1 ngh\u1ECBch \u0111\u1EA3o c\u1EE7a -1"
+    CorrectAnswer: B
+  - Type: 1
+    Text: "H\xE3y ch\u1ECDn c\xE2u tr\u1EA3 l\u1EDDi \u0111\xFAng:"
+    A: "S\u1ED1 ngh\u1ECBch \u0111\u1EA3o c\u1EE7a -2/3 l\xE0 2/3"
+    B: "S\u1ED1 ngh\u1ECBch \u0111\u1EA3o c\u1EE7a -2/3 l\xE0 -3/2"
+    C: "S\u1ED1 ngh\u1ECBch \u0111\u1EA3o c\u1EE7a -2/3 l\xE0 -3/(-2)"
+    D: "Ch\u1EC9 c\xF3 c\xE2u A l\xE0 \u0111\xFAng"
+    CorrectAnswer: B
+  - Type: 1
+    Text: "K\u1EBFt qu\u1EA3 c\u1EE7a ph\xE9p chia  -5 : (1/2)  l\xE0 "
+    A: -1/10
+    B: -10
+    C: 10
+    D: -5/2
+    CorrectAnswer: B
+  - Type: 1
+    Text: "Ph\xE2n s\u1ED1  27/100 \u0111\u01B0\u1EE3c vi\u1EBFt d\u01B0\u1EDBi d\u1EA1ng
+      s\u1ED1 th\u1EADp ph\xE2n l\xE0"
+    A: 0.27
+    B: 2.7
+    C: 0.027
+    D: "Ch\u1EC9 c\xF3 c\xE2u B \u0111\xFAng"
+    CorrectAnswer: A
+  - Type: 1
+    Text: "S\u1ED1 th\u1EADp ph\xE2n 0.07 \u0111\u01B0\u1EE3c vi\u1EBFt d\u01B0\u1EDBi
+      d\u1EA1ng ph\xE2n s\u1ED1 th\u1EADp ph\xE2n l\xE0"
+    A: 7/1000
+    B: 7/100
+    C: 0.7/100
+    D: "Ch\u1EC9 c\xF3 c\xE2u A l\xE0 \u0111\xFAng"
+    CorrectAnswer: B
+  - Type: 1
+    Text: "\u0110\u1EC3 \u0111\u1EB7t t\xEAn cho m\u1ED9t \u0111i\u1EC3m ng\u01B0\u1EDDi
+      ta th\u01B0\u1EDDng d\xF9ng"
+    A: "1 ch\u1EEF c\xE1i vi\u1EBFt th\u01B0\u1EDDng (a,b,c,...)"
+    B: "1 ch\u1EEF c\xE1i vi\u1EBFt hoa nh\u01B0 (A,B,\u2026)"
+    C: "B\u1EA5t k\xEC ch\u1EEF c\xE1i vi\u1EBFt th\u01B0\u1EDDng ho\u1EB7c vi\u1EBFt
+      hoa"
+    D: "T\u1EA5t c\u1EA3 c\xE1c c\xE2u tr\xEAn \u0111\u1EC1u \u0111\xFAng"
+    CorrectAnswer: B
+  - Type: 1
+    Text: "Khoanh tr\xF2n v\xE0o ch\u1EEF c\xE1i \u0111\u1EE9ng tr\u01B0\u1EDBc c\xE2u
+      \u0111\xFAng    :  Trong ba \u0111i\u1EC3m ph\xE2n bi\u1EC7t th\u1EB3ng h\xE0ng"
+    A: "Ph\u1EA3i c\xF3 m\u1ED9t \u0111i\u1EC3m l\xE0 trung \u0111i\u1EC3m c\u1EE7a
+      \u0111o\u1EA1n th\u1EB3ng m\xE0 hai \u0111\u1EA7u m\xFAt l\xE0 hai \u0111i\u1EC3m
+      c\xF2n l\u1EA1i"
+    B: "Ph\u1EA3i c\xF3 m\u1ED9t \u0111i\u1EC3m n\u1EB1m gi\u1EEFa hai \u0111i\u1EC3m
+      c\xF2n l\u1EA1i"
+    C: "Ph\u1EA3i c\xF3 m\u1ED9t \u0111i\u1EC3m c\xE1ch \u0111\u1EC1u hai \u0111i\u1EC3m
+      c\xF2n l\u1EA1i"
+    D: "Ch\u1EC9 c\xF3 c\xE2u C \u0111\xFAng"
+    CorrectAnswer: B
+  - Type: 1
+    Text: "L\u1EF1a ch\u1ECDn c\xE2u \u0111\xFAng     :   \u0110\u1EC3 \u0111\u1EB7t
+      t\xEAn cho m\u1ED9t \u0111\u01B0\u1EDDng th\u1EB3ng ng\u01B0\u1EDDi ta th\u01B0\u1EDDng
+      d\xF9ng:\\r\\n"
+    A: "Hai ch\u1EEF c\xE1i vi\u1EBFt hoa (nh\u01B0 MN,\u2026) ho\u1EB7c m\u1ED9t
+      ch\u1EEF c\xE1i vi\u1EBFt th\u01B0\u1EDDng"
+    B: "M\u1ED9t ch\u1EEF c\xE1i vi\u1EBFt th\u01B0\u1EDDng v\xE0 m\u1ED9t ch\u1EEF
+      c\xE1i vi\u1EBFt hoa"
+    C: "M\u1ED9t ch\u1EEF c\xE1i vi\u1EBFt hoa"
+    D: "Ch\u1EC9 c\xF3 c\xE2u B \u0111\xFAng"
+    CorrectAnswer: A
+  - Type: 1
+    Text: "Ch\u1ECDn c\xE2u tr\u1EA3 l\u1EDDi \u0111\xFAng  :   Qua ba \u0111i\u1EC3m
+      ph\xE2n bi\u1EC7t A, B, C th\u1EB3ng h\xE0ng "
+    A: "Ch\u1EC9 v\u1EBD \u0111\u01B0\u1EE3c m\u1ED9t \u0111\u01B0\u1EDDng th\u1EB3ng"
+    B: "V\u1EBD \u0111\u01B0\u1EE3c \u0111\xFAng ba \u0111\u01B0\u1EDDng th\u1EB3ng
+      ph\xE2n bi\u1EC7t"
+    C: "V\u1EBD \u0111\u01B0\u1EE3c nhi\u1EC1u h\u01A1n ba \u0111\u01B0\u1EDDng th\u1EB3ng
+      ph\xE2n bi\u1EC7t"
+    D: "C\u1EA3 ba c\xE2u tr\xEAn \u0111\u1EC1u \u0111\xFAng"
+    CorrectAnswer: A
+  - Type: 1
+    Text: "Khoanh tr\xF2n v\xE0o ch\u1EEF c\xE1i \u0111\u1EE9ng tr\u01B0\u1EDBc c\xE2u
+      \u0111\xFAng  :    \u0110\u1EC3 \u0111\u1EB7t t\xEAn cho m\u1ED9t tia ng\u01B0\u1EDDi
+      ta th\u01B0\u1EDDng d\xF9ng"
+    A: "Hai ch\u1EEF c\xE1i vi\u1EBFt th\u01B0\u1EDDng"
+    B: "M\u1ED9t ch\u1EEF c\xE1i vi\u1EBFt hoa"
+    C: "M\u1ED9t ch\u1EEF c\xE1i vi\u1EBFt th\u01B0\u1EDDng"
+    D: "M\u1ED9t ch\u1EEF c\xE1i vi\u1EBFt hoa (l\xE0m g\u1ED1c) v\xE0 m\u1ED9t ch\u1EEF
+      c\xE1i vi\u1EBFt th\u01B0\u1EDDng"
+    CorrectAnswer: D
+  - Type: 1
+    Text: "Khoanh tr\xF2n v\xE0o ch\u1EEF c\xE1i \u0111\u1EE9ng tr\u01B0\u1EDBc c\xE2u
+      \u0111\xFAng :  Cho bi\u1EBFt hai tia Ox v\xE0 Oy c\xF3 chung g\u1ED1c O, c\xF3
+      ng\u01B0\u1EDDi n\xF3i  :"
+    A: "Hai tia Ox v\xE0 Oy chung g\u1ED1c th\xEC \u0111\u1ED1i nhau"
+    B: "Hai tia Ox v\xE0 Oy n\u1EB1m tr\xEAn m\u1ED9t \u0111\u01B0\u1EDDng th\u1EB3ng
+      c\xF3 x, y c\xF9ng ph\xEDa v\u1EDBi  O th\xEC \u0111\u1ED1i nhau"
+    C: "Hai tia Ox v\xE0 Oy n\u1EB1m tr\xEAn m\u1ED9t \u0111\u01B0\u1EDDng th\u1EB3ng
+      c\xF3 x, y kh\xE1c ph\xEDa v\u1EDBi nhau th\xEC \u0111\u1ED1i nhau"
+    D: "C\u1EA3 ba c\xE2u tr\xEAn \u0111\u1EC1u \u0111\xFAng"
+    CorrectAnswer: C
+  - Type: 1
+    Text: "Khoanh tr\xF2n v\xE0o ch\u1EEF c\xE1i \u0111\u1EE9ng tr\u01B0\u1EDBc c\xE2u
+      \u0111\xFAng   :    Cho bi\u1EBFt hai tia Ox v\xE0 Oy c\xF3 chung g\u1ED1c
+      O, c\xF3 ng\u01B0\u1EDDi n\xF3i :"
+    A: "Hai tia Ox v\xE0 Oy chung g\u1ED1c O th\xEC tr\xF9ng nhau"
+    B: "Hai tia Ox v\xE0 Oy n\u1EB1m tr\xEAn m\u1ED9t \u0111\u01B0\u1EDDng th\u1EB3ng
+      c\xF3 x, y c\xF9ng ph\xEDa v\u1EDBi  O th\xEC tr\xF9ng nhau"
+    C: "Hai tia Ox v\xE0 Oy n\u1EB1m tr\xEAn m\u1ED9t \u0111\u01B0\u1EDDng th\u1EB3ng
+      c\xF3 x, y kh\xE1c ph\xEDa v\u1EDBi nhau th\xEC tr\xF9ng nhau"
+    D: "C\u1EA3 ba c\xE2u tr\xEAn \u0111\u1EC1u \u0111\xFAng"
+    CorrectAnswer: B
+  - Type: 1
+    Text: "Khoanh tr\xF2n v\xE0o ch\u1EEF c\xE1i \u0111\u1EE9ng tr\u01B0\u1EDBc c\xE2u
+      \u0111\xFAng\\r\\n\u0110\u1EC3 \u0111\u1EB7t t\xEAn cho m\u1ED9t \u0111o\u1EA1n
+      th\u1EB3ng ng\u01B0\u1EDDi ta th\u01B0\u1EDDng d\xF9ng  : "
+    A: "Hai ch\u1EEF c\xE1i vi\u1EBFt hoa"
+    B: "M\u1ED9t ch\u1EEF c\xE1i vi\u1EBFt hoa v\xE0 m\u1ED9t ch\u1EEF c\xE1i vi\u1EBFt
+      th\u01B0\u1EDDng"
+    C: "Hai ch\u1EEF c\xE1i vi\u1EBFt th\u01B0\u1EDDng"
+    D: "C\u1EA3 ba c\xE2u tr\xEAn \u0111\u1EC1u \u0111\xFAng"
+    CorrectAnswer: A
+  - Type: 1
+    Text: "Khoanh tr\xF2n v\xE0o ch\u1EEF c\xE1i \u0111\u1EE9ng tr\u01B0\u1EDBc c\xE2u
+      \u0111\xFAng   :    G\u1ECDi I l\xE0 m\u1ED9t \u0111i\u1EC3m b\u1EA5t k\xEC
+      thu\u1ED9c \u0111o\u1EA1n th\u1EB3ng MN "
+    A: "\u0110i\u1EC3m I ph\u1EA3i tr\xF9ng v\u1EDBi M ho\u1EB7c N"
+    B: "\u0110i\u1EC3m I ph\u1EA3i n\u1EB1m gi\u1EEFa hai \u0111i\u1EC3m M v\xE0
+      N"
+    C: "\u0110i\u1EC3m I ho\u1EB7c tr\xF9ng v\u1EDBi \u0111i\u1EC3m M ho\u1EB7c n\u1EB1m
+      gi\u1EEFa hai \u0111i\u1EC3m M v\xE0 N ho\u1EB7c tr\xF9ng v\u1EDBi \u0111i\u1EC3m
+      N"
+    D: "\u0110i\u1EC3m I l\xE0 trung \u0111i\u1EC3m c\u1EE7a \u0111o\u1EA1n th\u1EB3ng
+      MN"
+    CorrectAnswer: C
+  - Type: 1
+    Text: "Khoanh tr\xF2n v\xE0o ch\u1EEF c\xE1i \u0111\u1EE9ng tr\u01B0\u1EDBc c\xE2u
+      \u0111\xFAng   :    \u0110o\u1EA1n th\u1EB3ng MN l\xE0 h\xECnh g\u1ED3m"
+    A: "Hai \u0111i\u1EC3m M v\xE0 N"
+    B: "T\u1EA5t c\u1EA3 c\xE1c \u0111i\u1EC3m n\u1EB1m gi\u1EEFa M v\xE0 N"
+    C: "Hai \u0111i\u1EC3m M, N v\xE0 m\u1ED9t \u0111i\u1EC3m n\u1EB1m gi\u1EEFa
+      M v\xE0 N"
+    D: "\u0110i\u1EC3m M, N v\xE0 t\u1EA5t c\u1EA3 c\xE1c \u0111i\u1EC3m n\u1EB1m
+      gi\u1EEFa M v\xE0 N"
+    CorrectAnswer: D
+  - Type: 1
+    Text: "Khoanh tr\xF2n v\xE0o ch\u1EEF c\xE1i \u0111\u1EE9ng tr\u01B0\u1EDBc c\xE2u
+      \u0111\xFAng    :     N\u1EBFu \u0111i\u1EC3m M n\u1EB1m gi\u1EEFa hai \u0111i\u1EC3m
+      A v\xE0 B th\xEC:"
+    A: MA + AB = MB
+    B: MB + BA = MA
+    C: AM + MB = AB
+    D: AM + MB # AB
+    CorrectAnswer: C
+  - Type: 1
+    Text: "Khoanh tr\xF2n v\xE0o ch\u1EEF c\xE1i \u0111\u1EE9ng tr\u01B0\u1EDBc c\xE2u
+      \u0111\xFAng   :    Cho ba \u0111i\u1EC3m th\u1EB3ng h\xE0ng A, B, C. Bi\u1EBFt
+      AB=7cm, AC=3cm, CB=4cm. Ta c\xF3 :"
+    A: "\u0110i\u1EC3m A n\u1EB1m gi\u1EEFa hai \u0111i\u1EC3m B v\xE0 C"
+    B: "\u0110i\u1EC3m B n\u1EB1m gi\u1EEFa hai \u0111i\u1EC3m A v\xE0 C"
+    C: "\u0110i\u1EC3m C n\u1EB1m gi\u1EEFa hai \u0111i\u1EC3m B v\xE0 A"
+    D: "Kh\xF4ng c\xF3 \u0111i\u1EC3m n\xE0o n\u1EB1m gi\u1EEFa hai \u0111i\u1EC3m
+      c\xF2n l\u1EA1i"
+    CorrectAnswer: C
+  - Type: 1
+    Text: "Khoanh tr\xF2n v\xE0o ch\u1EEF c\xE1i \u0111\u1EE9ng tr\u01B0\u1EDBc c\xE2u
+      \u0111\xFAng   :    V\u1EDBi ba \u0111i\u1EC3m A, M, B ph\xE2n bi\u1EC7t, M
+      l\xE0 trung \u0111i\u1EC3m c\u1EE7a \u0111o\u1EA1n th\u1EB3ng AB n\u1EBFu  "
+    A: "AM + MB = AB v\xE0 AM \u2260 MB"
+    B: "AM + MB \u2260 AB v\xE0 AM = MB"
+    C: "AM + MB \u2260 AB v\xE0 AM \u2260 MB"
+    D: "AM + MB = AB v\xE0 AM = MB"
+    CorrectAnswer: D
+  - Type: 1
+    Text: "Nh\u1EEFng \u0111i\u1EC1u ki\u1EC7n n\xE0o sau \u0111\xE2y kh\u1EB3ng
+      \u0111\u1ECBnh Ot l\xE0 tia ph\xE2n gi\xE1c c\u1EE7a g\xF3c xOy"
+    A: "Bi\u1EBFt g\xF3c xOt b\u1EB1ng g\xF3c yOt"
+    B: "Bi\u1EBFt g\xF3c xOt + g\xF3c tOy = g\xF3c xOy"
+    C: "Bi\u1EBFt g\xF3c xOt + g\xF3c tOy = g\xF3c xOy v\xE0 g\xF3c xOt = g\xF3c
+      yOt"
+    D: "Bi\u1EBFt g\xF3c xOt + g\xF3c tOy = g\xF3c xOy v\xE0 g\xF3c xOt \u2260 g\xF3c
+      yOt"
+    CorrectAnswer: C
+  - Type: 1
+    Text: "\u0110i\u1EC1n v\xE0o ch\u1ED7 tr\u1ED1ng \u0111\u1EC3 ba s\u1ED1 \u1EDF
+      m\u1ED7i d\xF2ng l\xE0 ba s\u1ED1 t\u1EF1 nhi\xEAn li\xEAn ti\u1EBFp t\u0103ng
+      d\u1EA7n    :    \u2026\u2026 ;  \u2026\u2026.. ; 12"
+    A: 10; 11; 12
+    B: 8; 10; 12
+    C: 12; 14; 16
+    D: 11; 12; 13
+    CorrectAnswer: A
+  - Type: 1
+    Text: "\u0110i\u1EC1n v\xE0o ch\u1ED7 tr\u1ED1ng \u0111\u1EC3 ba s\u1ED1 \u1EDF
+      m\u1ED7i d\xF2ng l\xE0 ba s\u1ED1 t\u1EF1 nhi\xEAn li\xEAn ti\u1EBFp t\u0103ng
+      d\u1EA7n     \u2026\u2026 ;   a  ; \u2026\u2026..; "
+    A: a; 2*a; 3*a
+    B: a; a+1; a+2
+    C: a-2; a-1; a
+    D: a-1; a ; a+1
+    CorrectAnswer: D
+  - Type: 1
+    Text: "S\u1ED1 t\u1EF1 nhi\xEAn l\u1EDBn nh\u1EA5t c\xF3 hai ch\u1EEF s\u1ED1
+      kh\xE1c nhau l\xE0 \u2026\u2026\u2026\u2026."
+    A: 99
+    B: 89
+    C: 98
+    D: 97
+    CorrectAnswer: C
+  - Type: 1
+    Text: "T\u1ED5ng c\u1EE7a hai s\u1ED1 nguy\xEAn d\u01B0\u01A1ng l\xE0 m\u1ED9t
+      s\u1ED1\u2026\u2026\u2026\u2026\u2026"
+    A: "th\u1EADp ph\xE2n"
+    B: "nguy\xEAn d\u01B0\u01A1ng"
+    C: "nguy\xEAn \xE2m"
+    D: "nguy\xEAn"
+    CorrectAnswer: B
+  - Type: 1
+    Text: "T\u1ED5ng c\u1EE7a hai s\u1ED1 nguy\xEAn \xE2m l\xE0 m\u1ED9t s\u1ED1\u2026\u2026\u2026\u2026\u2026"
+    A: "th\u1EADp ph\xE2n"
+    B: "nguy\xEAn d\u01B0\u01A1ng"
+    C: "nguy\xEAn \xE2m"
+    D: "nguy\xEAn"
+    CorrectAnswer: C
+  - Type: 1
+    Text: "K\u1EBFt qu\u1EA3 c\u1EE7a ph\xE9p t\xEDnh sau (-4).(-3) l\xE0"
+    A: 4/3
+    B: 12
+    C: -12
+    D: 3/4
+    CorrectAnswer: B
+  - Type: 1
+    Text: "K\u1EBFt qu\u1EA3 c\u1EE7a ph\xE9p t\xEDnh sau (+4).(+3) l\xE0"
+    A: 4/3
+    B: 12
+    C: -12
+    D: 3/4
+    CorrectAnswer: B
+  - Type: 1
+    Text: "M\u1ED9t n\u1EEDa c\u1EE7a 20 b\u1EB1ng"
+    A: 8
+    B: 10
+    C: 2/3
+    D: -2/3
+    CorrectAnswer: B
+  - Type: 1
+    Text: "2/3 c\u1EE7a 12 b\u1EB1ng"
+    A: 8
+    B: 10
+    C: 2/3
+    D: -2/3
+    CorrectAnswer: A
+  - Type: 1
+    Text: "3/4 c\u1EE7a -8/9 b\u1EB1ng"
+    A: 8
+    B: 10
+    C: 2/3
+    D: -2/3
+    CorrectAnswer: D
+  - Type: 1
+    Text: "1/2  c\u1EE7a s\u1ED1 a b\u1EB1ng 10 th\xEC a = ?"
+    A: -8/9
+    B: 20
+    C: 12
+    D: 8/9
+    CorrectAnswer: B
+  - Type: 1
+    Text: "2/3  c\u1EE7a s\u1ED1 a b\u1EB1ng 8 th\xEC a = ?"
+    A: -8/9
+    B: 20
+    C: 12
+    D: 8/9
+    CorrectAnswer: C
+  - Type: 1
+    Text: "3/4  c\u1EE7a s\u1ED1 a b\u1EB1ng -2/3 th\xEC a = ?"
+    A: -8/9
+    B: 20
+    C: 12
+    D: 8/9
+    CorrectAnswer: A
+  - Type: 1
+    Text: "Tr\xEAn tia Ox, OM=a v\xE0 ON=b   :    N\u1EBFu a=2cm, b=3cm th\xEC"
+    A: "\u0110i\u1EC3m O n\u1EB1m gi\u1EEFa hai \u0111i\u1EC3m M v\xE0 N"
+    B: "\u0110i\u1EC3m M n\u1EB1m gi\u1EEFa hai \u0111i\u1EC3m O v\xE0 N"
+    C: "\u0110i\u1EC3m N n\u1EB1m gi\u1EEFa hai \u0111i\u1EC3m M v\xE0 O"
+    D: "O l\xE0 trung \u0111i\u1EC3m c\u1EE7a M v\xE0 N"
+    CorrectAnswer: B
+  - Type: 1
+    Text: "Tr\xEAn tia Ox, OM=a v\xE0 ON=b   :   N\u1EBFu a=5cm, b=3cm th\xEC"
+    A: "\u0110i\u1EC3m O n\u1EB1m gi\u1EEFa hai \u0111i\u1EC3m M v\xE0 N"
+    B: "\u0110i\u1EC3m M n\u1EB1m gi\u1EEFa hai \u0111i\u1EC3m O v\xE0 N"
+    C: "\u0110i\u1EC3m N n\u1EB1m gi\u1EEFa hai \u0111i\u1EC3m M v\xE0 O"
+    D: "O l\xE0 trung \u0111i\u1EC3m c\u1EE7a M v\xE0 N"
+    CorrectAnswer: C
+  - Type: 1
+    Text: "Cho M l\xE0 trung \u0111i\u1EC3m c\u1EE7a \u0111o\u1EA1n th\u1EB3ng AB  
+      :   N\u1EBFu AB=6cm th\xEC"
+    A: AM=MB=4cm
+    B: AM=MB=3cm
+    C: AM=MB=2cm
+    D: AM=MB=6cm
+    CorrectAnswer: B
+  - Type: 1
+    Text: "Cho M l\xE0 trung \u0111i\u1EC3m c\u1EE7a \u0111o\u1EA1n th\u1EB3ng AB   
+      :     N\u1EBFu AB=4cm th\xEC"
+    A: AM=MB=4cm
+    B: AM=MB=3cm
+    C: AM=MB=2cm
+    D: AM=MB=6cm
+    CorrectAnswer: C
+  - Type: 1
+    Text: "Hai g\xF3c A v\xE0 g\xF3c B v\u1EDBi G\xF3c A=35 \u0111\u1ED9 v\xE0 G\xF3c
+      B=55 \u0111\u1ED9 l\xE0"
+    A: "Hai g\xF3c b\xF9 nhau"
+    B: "Hai g\xF3c k\u1EC1 b\xF9"
+    C: "Hai g\xF3c ph\u1EE5 nhau"
+    D: "Hai g\xF3c \u0111\u1ED1i nhau"
+    CorrectAnswer: C
+  - Type: 1
+    Text: "Hai g\xF3c A v\xE0 g\xF3c B v\u1EDBi   G\xF3c A=35 \u0111\u1ED9 v\xE0
+      G\xF3c B=145 \u0111\u1ED9 l\xE0 "
+    A: "Hai g\xF3c b\xF9 nhau"
+    B: "Hai g\xF3c k\u1EC1 b\xF9"
+    C: "Hai g\xF3c ph\u1EE5 nhau"
+    D: "Hai g\xF3c \u0111\u1ED1i nhau"
+    CorrectAnswer: A
+  - Type: 1
+    Text: "Cho tia Ox, hai g\xF3c xOy v\xE0 g\xF3c xOz tr\xEAn c\xF9ng m\u1ED9t n\u1EEDa
+      m\u1EB7t ph\u1EB3ng c\xF3 b\u1EDD ch\u1EE9a tia Ox sao cho g\xF3c xOy c\xF3
+      s\u1ED1 \u0111o m \u0111\u1ED9 v\xE0 g\xF3c xOz c\xF3 s\u1ED1 \u0111o n \u0111\u1ED9 
+      :   N\u1EBFu m=20 \u0111\u1ED9  v\xE0 n=30 \u0111\u1ED9 th\xEC"
+    A: "Tia Ox n\u1EB1m gi\u1EEFa hai tia Oy, Oz"
+    B: "Tia Oy n\u1EB1m gi\u1EEFa hai tia Ox, Oz"
+    C: "Tia Oz n\u1EB1m gi\u1EEFa hai tia Oy, Ox"
+    D: "Tia Ox l\xE0 tia ph\xE2n gi\xE1c c\u1EE7a g\xF3c yOz"
+    CorrectAnswer: B
+  - Type: 1
+    Text: "Cho tia Ox, hai g\xF3c xOy v\xE0 g\xF3c xOz tr\xEAn c\xF9ng m\u1ED9t n\u1EEDa
+      m\u1EB7t ph\u1EB3ng c\xF3 b\u1EDD ch\u1EE9a tia Ox sao cho g\xF3c xOy c\xF3
+      s\u1ED1 \u0111o m \u0111\u1ED9 v\xE0 g\xF3c xOz c\xF3 s\u1ED1 \u0111o n \u0111\u1ED9 
+      :   N\u1EBFu m=45 \u0111\u1ED9  v\xE0 n=30 \u0111\u1ED9 th\xEC"
+    A: "Tia Ox n\u1EB1m gi\u1EEFa hai tia Oy, Oz"
+    B: "Tia Oy n\u1EB1m gi\u1EEFa hai tia Ox, Oz"
+    C: "Tia Oz n\u1EB1m gi\u1EEFa hai tia Oy, Ox"
+    D: "Tia Ox l\xE0 tia ph\xE2n gi\xE1c c\u1EE7a g\xF3c yOz"
+    CorrectAnswer: C
+  - Type: 2
+    Text: "Cho tia Oy n\u1EB1m gi\u1EEFa hai tia Ox v\xE0 Oz. Bi\u1EBFt g\xF3c xOy
+      c\xF3 s\u1ED1 \u0111o l\xE0 50o, g\xF3c xOz c\xF3 s\u1ED1 \u0111o l\xE0 120o
+      , yOz l\xE0 g\xF3c t\xF9 ?"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "Cho tia Oy n\u1EB1m gi\u1EEFa hai tia Ox v\xE0 Oz. Bi\u1EBFt g\xF3c xOy
+      c\xF3 s\u1ED1 \u0111o l\xE0 50o, g\xF3c xOz c\xF3 s\u1ED1 \u0111o l\xE0 120o
+      , yOz l\xE0 g\xF3c nh\u1ECDn ?"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "Cho tia Oy n\u1EB1m gi\u1EEFa hai tia Ox v\xE0 Oz. Bi\u1EBFt g\xF3c xOy
+      c\xF3 s\u1ED1 \u0111o l\xE0 50o, g\xF3c xOz c\xF3 s\u1ED1 \u0111o l\xE0 120o
+      , yOz l\xE0 g\xF3c b\u1EB9t?"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "Cho tia Oy n\u1EB1m gi\u1EEFa hai tia Ox v\xE0 Oz. Bi\u1EBFt g\xF3c xOy
+      c\xF3 s\u1ED1 \u0111o l\xE0 50o, g\xF3c xOz c\xF3 s\u1ED1 \u0111o l\xE0 120o
+      , yOz l\xE0 g\xF3c vu\xF4ng?"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "Cho tia Oy n\u1EB1m gi\u1EEFa hai tia Ox v\xE0 Oz. Bi\u1EBFt  xOy = 50o.
+      \u0110\u1EC3 g\xF3c xOz l\xE0 g\xF3c t\xF9 th\xEC g\xF3c yOz ph\u1EA3i c\xF3
+      s\u1ED1 \u0111o yOz > 40o"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "Cho tia Oy n\u1EB1m gi\u1EEFa hai tia Ox v\xE0 Oz. Bi\u1EBFt  xOy = 50o.
+      \u0110\u1EC3 g\xF3c xOz l\xE0 g\xF3c t\xF9 th\xEC g\xF3c yOz ph\u1EA3i c\xF3
+      s\u1ED1 \u0111o 40o<yOz<130o"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "Cho tia Oy n\u1EB1m gi\u1EEFa hai tia Ox v\xE0 Oz. Bi\u1EBFt  xOy = 50o.
+      \u0110\u1EC3 g\xF3c xOz l\xE0 g\xF3c t\xF9 th\xEC g\xF3c yOz ph\u1EA3i c\xF3
+      s\u1ED1 \u0111o 40o\u2264yOz<130o"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "Cho tia Oy n\u1EB1m gi\u1EEFa hai tia Ox v\xE0 Oz. Bi\u1EBFt  xOy = 50o.
+      \u0110\u1EC3 g\xF3c xOz l\xE0 g\xF3c t\xF9 th\xEC g\xF3c yOz ph\u1EA3i c\xF3
+      s\u1ED1 \u0111o 40o<yOz\u2264130o\\t"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "Cho tia Ot n\u1EB1m gi\u1EEFa hai tia Ox v\xE0 Oy, ta c\xF3 hai g\xF3c
+      xOt v\xE0 tOz ph\u1EE5 nhau"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "Cho tia Ot n\u1EB1m gi\u1EEFa hai tia Ox v\xE0 Oy, ta c\xF3 hai g\xF3c
+      xOt v\xE0 tOz b\xF9 nhau"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "Cho tia Ot n\u1EB1m gi\u1EEFa hai tia Ox v\xE0 Oy, ta c\xF3 hai g\xF3c
+      xOt v\xE0 tOz k\u1EC1 nhau"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "Cho tia Ot n\u1EB1m gi\u1EEFa hai tia Ox v\xE0 Oy, ta c\xF3 hai g\xF3c
+      xOt v\xE0 tOz k\u1EC1 b\xF9"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "Cho g\xF3c A=35o  v\xE0 g\xF3c B=45o th\xEC ta c\xF3 g\xF3c A = g\xF3c
+      B"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "Cho g\xF3c A=35o  v\xE0 g\xF3c B=45o th\xEC ta c\xF3 g\xF3c A  < g\xF3c
+      B"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "Cho g\xF3c A=35o  v\xE0 g\xF3c B=45o th\xEC ta c\xF3 g\xF3c A  > g\xF3c
+      B"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "G\xF3c b\u1EB9t l\xE0 g\xF3c c\xF3 hai c\u1EA1nh l\xE0 hai tia \u0111\u1ED1i
+      nhau"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "G\u1ECDi M l\xE0 \u0111i\u1EC3m n\u1EB1m gi\u1EEFa hai \u0111i\u1EC3m
+      A, B. L\u1EA5y \u0111i\u1EC3m O kh\xF4ng n\u1EB1m tr\xEAn \u0111\u01B0\u1EDDng
+      th\u1EB3ng AB. V\u1EBD ba tia OA, OB, OM. Tia OA n\u1EB1m gi\u1EEFa hai tia
+      c\xF2n l\u1EA1i"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "G\u1ECDi M l\xE0 \u0111i\u1EC3m n\u1EB1m gi\u1EEFa hai \u0111i\u1EC3m
+      A, B. L\u1EA5y \u0111i\u1EC3m O kh\xF4ng n\u1EB1m tr\xEAn \u0111\u01B0\u1EDDng
+      th\u1EB3ng AB. V\u1EBD ba tia OA, OB, OM. Tia OM n\u1EB1m gi\u1EEFa hai tia
+      c\xF2n l\u1EA1i"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "Cho hai \u0111i\u1EC3m M, N n\u1EB1m c\xF9ng ph\xEDa \u0111\u1ED1i v\u1EDBi
+      \u0111\u01B0\u1EDDng th\u1EB3ng a, hai \u0111i\u1EC3m M, P n\u1EB1m kh\xE1c
+      ph\xEDa \u0111\u1ED1i v\u1EDBi \u0111\u01B0\u1EDDng th\u1EB3ng a . N\u1EEDa
+      mp b\u1EDD a ch\u1EE9a \u0111i\u1EC3m M v\xE0 n\u1EEDa mp b\u1EDD a ch\u1EE9a
+      \u0111i\u1EC3m P l\xE0 2 n\u1EEDa mp \u0111\u1ED1i nhau"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "Cho hai \u0111i\u1EC3m M, N n\u1EB1m c\xF9ng ph\xEDa \u0111\u1ED1i v\u1EDBi
+      \u0111\u01B0\u1EDDng th\u1EB3ng a, hai \u0111i\u1EC3m M, P n\u1EB1m kh\xE1c
+      ph\xEDa \u0111\u1ED1i v\u1EDBi \u0111\u01B0\u1EDDng th\u1EB3ng a . N\u1EEDa
+      mp b\u1EDD a ch\u1EE9a \u0111i\u1EC3m M v\xE0 n\u1EEDa mp b\u1EDD a kh\xF4ng
+      ch\u1EE9a \u0111i\u1EC3m N l\xE0 2 n\u1EEDa mp \u0111\u1ED1i nhau"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "Cho hai \u0111i\u1EC3m M, N n\u1EB1m c\xF9ng ph\xEDa \u0111\u1ED1i v\u1EDBi
+      \u0111\u01B0\u1EDDng th\u1EB3ng a, hai \u0111i\u1EC3m M, P n\u1EB1m kh\xE1c
+      ph\xEDa \u0111\u1ED1i v\u1EDBi \u0111\u01B0\u1EDDng th\u1EB3ng a .N\u1EEDa
+      mp b\u1EDD a ch\u1EE9a \u0111i\u1EC3m P v\xE0 n\u1EEDa mp b\u1EDD a kh\xF4ng
+      ch\u1EE9a \u0111i\u1EC3m N l\xE0 2 n\u1EEDa mp \u0111\u1ED1i nhau"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "Hai \u0111\u01B0\u1EDDng th\u1EB3ng tr\xF9ng nhau l\xE0 ch\u1EC9 c\xF3
+      m\u1ED9t \u0111i\u1EC3m chung"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "Hai \u0111\u01B0\u1EDDng th\u1EB3ng tr\xF9ng nhau l\xE0 c\xF3 v\xF4 s\u1ED1
+      \u0111i\u1EC3m chung"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "Hai \u0111\u01B0\u1EDDng th\u1EB3ng ph\xE2n bi\u1EC7t c\u1EAFt nhau c\xF3
+      v\xF4 s\u1ED1 \u0111i\u1EC3m chung"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "Hai \u0111\u01B0\u1EDDng th\u1EB3ng ph\xE2n bi\u1EC7t c\u1EAFt nhau ch\u1EC9
+      c\xF3 m\u1ED9t \u0111i\u1EC3m chung"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "Hai \u0111\u01B0\u1EDDng th\u1EB3ng song song l\xE0 2 \u0111\u01B0\u1EDDng
+      th\u1EB3ng kh\xF4ng c\xF3 \u0111i\u1EC3m chung n\xE0o"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "T\u1EC9 l\u1EC7 ph\u1EA7n tr\u0103m c\u1EE7a 3 v\xE0 6 l\xE0 50%"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "T\u1EC9 l\u1EC7 ph\u1EA7n tr\u0103m c\u1EE7a 2 v\xE0 6 l\xE0 40%"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "T\u1EC9 l\u1EC7 ph\u1EA7n tr\u0103m c\u1EE7a 3/10 v\xE0 1/2 l\xE0 60%"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "T\u1EC9 l\u1EC7 ph\u1EA7n tr\u0103m c\u1EE7a 5/3 v\xE0 7/2 l\xE0 60%"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "(-5/7)*x = (-5/7) th\xEC x = 0"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "(-5/7)*x = (-5/7) th\xEC x = 1"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "(-1/3) + x = 0 th\xEC x = 1/3"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "(-1/3) + x = 0 th\xEC x = (-1/3)"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "Mu\u1ED1n c\u1ED9ng hai ph\xE2n s\u1ED1 kh\xF4ng c\xF9ng m\u1EABu, ta
+      vi\u1EBFt ch\xFAng d\u01B0\u1EDBi d\u1EA1ng hai ph\xE2n s\u1ED1 c\xF3 c\xF9ng
+      m\u1ED9t m\u1EABu, r\u1ED3i c\u1ED9ng c\xE1c t\u1EED v\xE0 gi\u1EEF nguy\xEAn
+      m\u1EABu chung"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "Mu\u1ED1n c\u1ED9ng hai ph\xE2n s\u1ED1 kh\xF4ng c\xF9ng m\u1EABu, ta
+      vi\u1EBFt ch\xFAng d\u01B0\u1EDBi d\u1EA1ng hai ph\xE2n s\u1ED1 c\xF3 c\xF9ng
+      m\u1ED9t t\u1EED, r\u1ED3i c\u1ED9ng c\xE1c m\u1EABu v\xE0 gi\u1EEF nguy\xEAn
+      t\u1EED chung"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "Mu\u1ED1n c\u1ED9ng hai ph\xE2n s\u1ED1 c\xF9ng m\u1EABu, ta c\u1ED9ng
+      c\xE1c t\u1EED v\xE0 gi\u1EEF nguy\xEAn m\u1EABu chung"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: 6/7 < 7/6
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: 7/7 < 1
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: 7/7 = 1
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: -6/7 < -7/6
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: -6/7 > -7/6
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: 3*3 + 3 = 18
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: 3*3 + 3 = 12
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: 18/3 +10 = 18/13
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: 18/3 +10 = 16
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "Quy \u0111\u1ED3ng m\u1EABu hai ph\xE2n s\u1ED1 l\xE0 bi\u1EBFn \u0111\u1ED5i
+      hai ph\xE2n s\u1ED1 \u0111\xE3 cho th\xE0nh c\xE1c ph\xE2n s\u1ED1 t\u01B0\u01A1ng
+      \u1EE9ng b\u1EB1ng ch\xFAng nh\u01B0ng c\u0169ng c\xF3 chung m\u1ED9t m\u1EABu
+      s\u1ED1"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: (+4)*(-3) = (+12)
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: (+4)*(-3) = (-12)
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "17 \u2013 (19 - 38) = 17 \u2013 19 \u2013 38"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "17 + (19 - 38) = 17 + 19 \u2013 38"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: 1 + 1 + 1 + 1  = 1 + 1 -  ( -1 - 1)
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: 1 - 1 - 1 -1 - 1  = 10 + ( 15 - 28 )
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "5 + a = 0 th\xEC a = -5"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "5 + a = 0 th\xEC a = 5"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: (-3) + (+6) = 3
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: (-3) + (+6) = -3
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: (-3) + (+6) = 9
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: (-3) + (+6) = -9
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "S\u1ED1 \u0111\u1ED1i c\u1EE7a 5 l\xE0 -5"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "S\u1ED1 \u0111\u1ED1i c\u1EE7a -5 l\xE0 -5"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "S\u1ED1 \u0111\u1ED1i c\u1EE7a 0 l\xE0 ch\xEDnh n\xF3"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "S\u1ED1 \u0111\u1ED1i c\u1EE7a gi\xE1 tr\u1ECB tuy\u1EC7t \u0111\u1ED1i
+      c\u1EE7a 3 l\xE0 3"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: (-3) < 0
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: (-3) > 0
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: (-3) < (-4)
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: (-3) > (-4)
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: (-3) > (-4)
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "3 l\xE0 s\u1ED1 t\u1EF1 nhi\xEAn"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "(-3) l\xE0 s\u1ED1 t\u1EF1 nhi\xEAn"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "3/4 l\xE0 s\u1ED1 nguy\xEAn"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "9/4 l\xE0 s\u1ED1 th\u1EADp ph\xE2n"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "Ta bi\u1EC3u di\u1EC5n c\xE1c s\u1ED1 nguy\xEAn \xE2m tr\xEAn tia \u0111\u1ED1i
+      c\u1EE7a tia s\u1ED1"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "\u01AF\u1EDBc chung c\u1EE7a 4 v\xE0 8 l\xE0 1,2,4"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "\u01AF\u1EDBc chung c\u1EE7a 5 v\xE0 7 l\xE0 1,5,7"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "\u01AF\u1EDBc chung c\u1EE7a 5 v\xE0 7 l\xE0 1"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "3 l\xE0 \u01B0\u1EDBc chung c\u1EE7a 6 v\xE0 8"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "3 l\xE0 \u01B0\u1EDBc chung c\u1EE7a 6 v\xE0 33"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: 24 = 2*2*2*3
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: 24 = 2*4
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: 55 = 5 + 5
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: 111 = 1*1*1
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: 111 = 111*1
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "C\xF3 hai ch\u1EEF s\u1ED1 t\u1EF1 nhi\xEAn li\xEAn ti\u1EBFp \u0111\u1EC1u
+      l\xE0 s\u1ED1 nguy\xEAn t\u1ED1 l\xE0 2 v\xE0 3"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "C\xF3 hai ch\u1EEF s\u1ED1 t\u1EF1 nhi\xEAn li\xEAn ti\u1EBFp \u0111\u1EC1u
+      l\xE0 s\u1ED1 nguy\xEAn t\u1ED1 l\xE0 5 v\xE0 6"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "C\xF3 ba s\u1ED1 l\u1EBB li\xEAn ti\u1EBFp \u0111\u1EC1u l\xE0 s\u1ED1
+      nguy\xEAn t\u1ED1 l\xE0 3 ,5 ,7"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "C\xF3 ba s\u1ED1 l\u1EBB li\xEAn ti\u1EBFp \u0111\u1EC1u l\xE0 s\u1ED1
+      nguy\xEAn t\u1ED1 l\xE0 5,7,9"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "C\xF3 m\u1ED9t s\u1ED1 nguy\xEAn t\u1ED1 ch\u1EB5n l\xE0 2"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "S\u1ED1 nguy\xEAn t\u1ED1 nh\u1ECF nh\u1EA5t l\xE0 2"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "S\u1ED1 nguy\xEAn t\u1ED1 nh\u1ECF nh\u1EA5t l\xE0 1"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "C\xF3 m\u1ED9t s\u1ED1 nguy\xEAn t\u1ED1 ch\u1EB5n l\xE0 -2"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "C\xF3 hai ch\u1EEF s\u1ED1 t\u1EF1 nhi\xEAn li\xEAn ti\u1EBFp \u0111\u1EC1u
+      l\xE0 s\u1ED1 nguy\xEAn t\u1ED1 l\xE0 -3 v\xE0 -2"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "C\xF3 ch\u1EEF s\u1ED1 t\u1EADn c\xF9ng l\xE0 ch\u1EEF s\u1ED1 ch\u1EB5n
+      chia h\u1EBFt cho 2"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "C\xF3 ch\u1EEF s\u1ED1 t\u1EADn c\xF9ng l\xE0 ch\u1EEF s\u1ED1 ch\u1EB5n
+      ch\u1EAFc ch\u1EAFn chia h\u1EBFt cho 10"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "C\xF3 ch\u1EEF s\u1ED1 t\u1EADn c\xF9ng l\xE0 0 ho\u1EB7c 5 chia h\u1EBFt
+      cho 5"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "C\xF3 ch\u1EEF s\u1ED1 t\u1EADn c\xF9ng l\xE0 0 ho\u1EB7c 5 chia h\u1EBFt
+      cho 10"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "S\u1ED1 c\xF3 t\u1ED5ng c\xE1c ch\u1EEF s\u1ED1 chia h\u1EBFt cho 9 ch\u1EAFc
+      ch\u1EAFc chia h\u1EBFt cho 9"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "S\u1ED1 c\xF3 ch\u1EEF s\u1ED1 t\u1EADn c\xF9ng l\xE0 0 ho\u1EB7c 5 chia
+      h\u1EBFt cho 10"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "S\u1ED1 c\xF3 ch\u1EEF s\u1ED1 t\u1EADn c\xF9ng l\xE0 0 ho\u1EB7c 5 chia
+      h\u1EBFt cho 5"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "S\u1ED1 c\xF3 ch\u1EEF s\u1ED1 t\u1EADn c\xF9ng l\xE0 ch\u1EEF s\u1ED1
+      ch\u1EB5n ch\u1EAFc ch\u1EAFn chia h\u1EBFt cho 10"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "S\u1ED1 c\xF3 ch\u1EEF s\u1ED1 t\u1EADn c\xF9ng l\xE0 ch\u1EEF s\u1ED1
+      ch\u1EB5n chia h\u1EBFt cho 2"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "140; 205; 1205; 120 l\xE0 nh\u1EEFng s\u1ED1 chia h\u1EBFt cho 5"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "162; 111111111; 1305; 180 l\xE0 nh\u1EEFng s\u1ED1 chia h\u1EBFt cho 9"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "S\u1ED1 c\xF3 t\u1ED5ng c\xE1c ch\u1EEF s\u1ED1 chia h\u1EBFt cho 3 ch\u1EAFc
+      ch\u1EAFn chia h\u1EBFt cho 9"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "S\u1ED1 c\xF3 t\u1ED5ng c\xE1c ch\u1EEF s\u1ED1 chia h\u1EBFt cho 3 ch\u1EAFc
+      ch\u1EAFn chia h\u1EBFt cho 3"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "S\u1ED1 c\xF3 t\u1ED5ng c\xE1c ch\u1EEF s\u1ED1 chia h\u1EBFt cho 3 kh\xF4ng
+      chia h\u1EBFt cho 9"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "333,2154,231,111 chia h\u1EBFt cho 3 nh\u01B0ng kh\xF4ng chia h\u1EBFt
+      cho 9"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "N\u1EBFu m\u1ED7i s\u1ED1 h\u1EA1ng c\u1EE7a t\u1ED5ng chia h\u1EBFt cho
+      4 th\xEC t\u1ED5ng chia h\u1EBFt cho 4"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "N\u1EBFu m\u1ED7i s\u1ED1 h\u1EA1ng c\u1EE7a t\u1ED5ng kh\xF4ng chia h\u1EBFt
+      cho 4 th\xEC t\u1ED5ng kh\xF4ng chia h\u1EBFt cho 4"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+  - Type: 2
+    Text: "Th\u1EE9 t\u1EF1 th\u1EF1c hi\u1EC7n c\xE1c ph\xE9p t\xEDnh \u0111\u1ED1i
+      v\u1EDBi bi\u1EC3u th\u1EE9c kh\xF4ng c\xF3 d\u1EA5u ngo\u1EB7c l\u0169y th\u1EEBa  
+      ->  nh\xE2n v\xE0 chia -> c\u1ED9ng v\xE0 tr\u1EEB"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: "\xD0\xFAng"
+  - Type: 2
+    Text: "Th\u1EE9 t\u1EF1 th\u1EF1c hi\u1EC7n c\xE1c ph\xE9p t\xEDnh \u0111\u1ED1i
+      v\u1EDBi bi\u1EC3u th\u1EE9c kh\xF4ng c\xF3 d\u1EA5u ngo\u1EB7c l\u0169y th\u1EEBa
+      -> c\u1ED9ng v\xE0 tr\u1EEB ->  nh\xE2n v\xE0 chia"
+    A: 
+    B: 
+    C: 
+    D: 
+    CorrectAnswer: Sai
+--- !u!4 &752162738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752162736}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.42286056, y: -0.75080353, z: 76.93341}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &762554339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,7 +3415,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 938839ce19b973a48ac73bc6d1332935, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 489b070223bd41f4f82acbef4d4a46bb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1933,15 +3443,14 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 248194861}
+  m_Children: []
   m_Father: {fileID: 1144331222}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 110, y: 394}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchoredPosition: {x: 320, y: 393}
+  m_SizeDelta: {x: 150, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &841201107
 GameObject:
@@ -2012,6 +3521,9 @@ MonoBehaviour:
   menu: {fileID: 510295031}
   settings: {fileID: 841201107}
   back: {fileID: 828271070}
+  music: {fileID: 762554341}
+  gameMusic: {fileID: 1669466090}
+  clip: {fileID: 8300000, guid: a2cdaa91c8664574784763e2b06c81c5, type: 3}
 --- !u!4 &999920019
 Transform:
   m_ObjectHideFlags: 0
@@ -2706,6 +4218,7 @@ RectTransform:
   - {fileID: 2096078286}
   - {fileID: 510295032}
   - {fileID: 841201108}
+  - {fileID: 2059001675936180942}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3410,6 +4923,7 @@ MonoBehaviour:
   backtrack: {fileID: 8300000, guid: ac3468a6898c58d4f85bf5420548aa87, type: 3}
   musicVolume: {fileID: 762554341}
   gameMusicVolume: {fileID: 1669466090}
+  canChangeScene: 1
 --- !u!4 &1812711237
 Transform:
   m_ObjectHideFlags: 0
@@ -4013,7 +5527,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c5cc2f4de03ea494d93a154ec91d5f62, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c51a40297dcdd94184fa9600095f535, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4046,10 +5560,10 @@ RectTransform:
   m_Father: {fileID: 1144331222}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 833, y: 394}
-  m_SizeDelta: {x: -1840, y: -1000}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -847, y: 449}
+  m_SizeDelta: {x: 150, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2124626056
 GameObject:
@@ -4062,6 +5576,7 @@ GameObject:
   - component: {fileID: 2124626058}
   - component: {fileID: 2124626057}
   - component: {fileID: 2124626059}
+  - component: {fileID: 2124626060}
   m_Layer: 0
   m_Name: MENU0
   m_TagString: Untagged
@@ -4145,3 +5660,490 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f1360938f4bc34785ebc989864566d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2124626060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124626056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 503a74c458c9b8f4fafbca7c1b4cec87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2059001675936180936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059001675936180943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 5e95d033b71decb4ab05652e9b6605c7, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2059001675936180937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059001675936180943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2059001675936180936}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2059001675936180938}
+        m_MethodName: MakeSure
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2059001675936180938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059001675936180943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31effe8a4f718a64e988d1e255db9ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  e: {fileID: 5951702220055963773}
+  txtdiem: {fileID: 0}
+--- !u!222 &2059001675936180939
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059001675936180943}
+  m_CullTransparentMesh: 0
+--- !u!224 &2059001675936180942
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059001675936180943}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children:
+  - {fileID: 5951702220055963772}
+  m_Father: {fileID: 1144331222}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 850, y: 450}
+  m_SizeDelta: {x: 330, y: 230}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2059001675936180943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2059001675936180942}
+  - component: {fileID: 2059001675936180939}
+  - component: {fileID: 2059001675936180936}
+  - component: {fileID: 2059001675936180937}
+  - component: {fileID: 2059001675936180938}
+  m_Layer: 5
+  m_Name: Exit 1 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &5951702219315415232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5951702219315415235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 258ac134ce06ab44fab3467ff73f37f0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5951702219315415233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5951702219315415235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 5951702219315415232}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2059001675936180938}
+        m_MethodName: Cancel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!224 &5951702219315415234
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5951702219315415235}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5951702220055963772}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 243, y: -191}
+  m_SizeDelta: {x: -750, y: -530}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &5951702219315415235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5951702219315415234}
+  - component: {fileID: 5951702219315415247}
+  - component: {fileID: 5951702219315415232}
+  - component: {fileID: 5951702219315415233}
+  m_Layer: 5
+  m_Name: Cancel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!222 &5951702219315415247
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5951702219315415235}
+  m_CullTransparentMesh: 0
+--- !u!222 &5951702220055963770
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5951702220055963773}
+  m_CullTransparentMesh: 0
+--- !u!114 &5951702220055963771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5951702220055963773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: a0101810bfebed14b8e568e299ff3ed3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!224 &5951702220055963772
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5951702220055963773}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children:
+  - {fileID: 5951702220249197646}
+  - {fileID: 5951702219315415234}
+  m_Father: {fileID: 2059001675936180942}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -1691, y: -851}
+  m_SizeDelta: {x: 870, y: 470}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &5951702220055963773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5951702220055963772}
+  - component: {fileID: 5951702220055963770}
+  - component: {fileID: 5951702220055963771}
+  m_Layer: 5
+  m_Name: Exit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!222 &5951702220249197643
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5951702220249197647}
+  m_CullTransparentMesh: 0
+--- !u!114 &5951702220249197644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5951702220249197647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 60323469807c9304fa2c3a0f346efdb2, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5951702220249197645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5951702220249197647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 5951702220249197644}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2059001675936180938}
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!224 &5951702220249197646
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5951702220249197647}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5951702220055963772}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -244, y: -191}
+  m_SizeDelta: {x: -750, y: -530}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &5951702220249197647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5951702220249197646}
+  - component: {fileID: 5951702220249197643}
+  - component: {fileID: 5951702220249197644}
+  - component: {fileID: 5951702220249197645}
+  m_Layer: 5
+  m_Name: Ok
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1

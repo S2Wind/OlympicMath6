@@ -24,7 +24,19 @@ public class PlayerPrefabConfigs : MonoBehaviour
 
     const string INIT_KEY = "init";
 
+    const string diem_KEY = "diem";
 
+    const string FirstTime_Key = "firtTime";
+
+    public static int SetDiem
+    {
+        get { return PlayerPrefs.GetInt(diem_KEY); }
+        set { PlayerPrefs.SetInt(diem_KEY, value); }
+    }
+    public static int GetDiem()
+    {
+        return PlayerPrefs.GetInt(diem_KEY);
+    }
     public static int SetInit
     {
         get { return PlayerPrefs.GetInt(INIT_KEY); }

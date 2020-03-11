@@ -15,10 +15,18 @@ public class MusicControler : MonoBehaviour
     [SerializeField] Slider musicVolume;
     [SerializeField] Slider gameMusicVolume;
 
-    public void FindSlider()
+    public bool canChangeScene = true;
+
+    public void GetSlider(Slider a,Slider b)
     {
-            musicVolume = GameObject.Find("Music").GetComponent<Slider>();
-            gameMusicVolume = GameObject.Find("GameMusic").GetComponent<Slider>();
+        musicVolume = a;
+        gameMusicVolume = b;
+    }
+
+    public void NullSlider()
+    {
+        musicVolume = null;
+        gameMusicVolume = null;
     }
 
     private void Awake()
@@ -49,16 +57,17 @@ public class MusicControler : MonoBehaviour
         audioSource.volume = MusicConfig.GetMusicKey();
     }
 
-
-
     private void Update()
     {
-        if (GameObject.Find("GameMusic").GetComponent<Slider>() != null)
+        if (musicVolume != null)
         {
             MusicConfig.SetMusicKey(musicVolume.value);
             MusicConfig.SetGameMusicKey(gameMusicVolume.value);
-            Debug.Log(MusicConfig.GetGameMusicKey());
             audioSource.volume = MusicConfig.GetMusicKey();
+        }
+        else
+        {
+            Debug.Log("Error Not Found!");
         }
     }
 
@@ -84,6 +93,7 @@ public class MusicControler : MonoBehaviour
 
     public void PlayBackTrack(AudioClip clip)
     {
+        audioSource.clip = clip;
         audioSource.Play();
     }
 }
